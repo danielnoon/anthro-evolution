@@ -1,0 +1,96 @@
+{
+  "label": "Primates",
+  "height": 450,
+  "top": {
+    "label": "Strepsirrhini",
+    "height": 200,
+    "top": {
+      "label": "Lorisoidea",
+      "height": 100,
+      "top": "Loris",
+      "topExample": "Loris lydekkerianus",
+      "bottom": "Nycticebus",
+      "bottomExample": "Nycticebus bengalensis"
+    },
+    "bottom": {
+      "label": "Lemuroidea",
+      "height": 150,
+      "top": {
+        "label": "Lemuridae",
+        "height": 100,
+        "top": "Lemur",
+        "topExample": "Lemur catta",
+        "bottom": "Eulemur",
+        "bottomExample": "Euemur rubriventer"
+      },
+      "bottom": "Daubentoniidae",
+      "bottomExample": "Daubentonia madagascariensis"
+    }
+  },
+  "bottom": {
+    "label": "Haplorhini",
+    "height": 275,
+    "bottom": {
+      "label": "Tarsiiformes",
+      "height": 100,
+      "top": "Cephalopachus",
+      "topExample": "Cephalopacus banacus",
+      "bottom": "Tarsius",
+      "bottomExample": "Tarsius spectrum"
+    },
+    "top": {
+      "label": "Simiiformes                                                        ",
+      "height": 325,
+      "top": {
+        "label": "Platyrrhines (New World Monkeys)",
+        "top": "Callitrichidae",
+        "bottom": "Cebidae",
+        "topExample": "Cebuella pygmaea",
+        "bottomExample": "Cebus imitator",
+        "height": 100
+      },
+      "bottom": {
+        "label": "Catarrhines",
+        "height": 300,
+        "top": {
+          "label": "Cercopithecoids (Old World Monkeys)",
+          "top": "Miopithecus",
+          "topExample": "Saimiri sciureus",
+          "bottom": "Macaca",
+          "bottomExample": "Macaca sylvanus",
+          "height": 100
+        },
+        "bottom": {
+          "label": "Hominoidea",
+          "height": 250,
+          "top": {
+            "label": "Hylobatidae",
+            "top": "Hylobates",
+            "topExample": "Hylobates lar",
+            "bottom": "Symphalangus",
+            "bottomExample": "Symphalangus syndactylus",
+            "height": 100
+          },
+          "bottom": {
+            "label": "Hominidae           ",
+            "height": 200,
+            "top": {
+              "label": "Homininae              ",
+              "height": 200,
+              "top": {
+                "label": "Hominini",
+                "height": 200,
+                "top": "Homo",
+                "bottom": "Pan"
+              },
+              "bottom": "Gorillini",
+              "bottomExample": "Gorilla gorilla"
+            },
+            "bottom": "Ponginae",
+            "bottomExample": "Pongo pygmaeus"
+          }
+        }
+      }
+    }
+  }
+}

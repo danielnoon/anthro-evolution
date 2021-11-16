@@ -7,4 +7,4 @@ const canvas = document.querySelector<HTMLCanvasElement>("#view")!;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-startGame(new MainScene(), { canvas });
+startGame(new MainScene(), { canvas, debug: false });

@@ -1,20 +1,94 @@
 import { Game, Scene } from "gamedeck/lib";
-import { Rectangle } from "gamedeck/lib/GObjects";
+import { Rectangle, Dot } from "gamedeck/lib/GObjects";
+import { Vector2 } from "gamedeck/lib/Utils";
+import Clade from "./obj/Clade.obj";
+
+import clades from "../data/clades.json";
+import { Camera, CameraState } from "./obj/Camera.obj";
+
+const BACKGROUND_COLOR = "#f2f2f2";
+
+interface CladeData {
+  label: string;
+  height: number;
+  top: CladeData | string;
+  bottom: CladeData | string;
+  color?: string;
+  topColor?: string;
+  bottomColor?: string;
+  leftColor?: string;
+  topExample?: string;
+  bottomExample?: string;
+}
 
 export class MainScene extends Scene {
-  color = 0;
+  cameraState = new CameraState();
+  mousePos = new Vector2(0, 0);
+  isClicking = false;
 
   build(game: Game) {
+    function isSubClade(c: string | CladeData): c is CladeData {
+      return typeof c !== "string";
+    }
+
+    function makeClade(clade: CladeData, root: boolean): Clade {
+      const t = isSubClade(clade.top) ? clade.top.label : clade.top;
+      const b = isSubClade(clade.bottom) ? clade.bottom.label : clade.bottom;
+
+      return new Clade(
+        {
+          bottomLabel: b,
+          topLabel: t,
+          leftLabel: root ? "Primates" : "",
+          position: new Vector2(0, root ? 375 : 0),
+          height: clade.height,
+          children: [
+            isSubClade(clade.top) ? makeClade(clade.top, false) : null,
+            isSubClade(clade.bottom) ? makeClade(clade.bottom, false) : null,
+          ],
+          color: clade.color,
+          topColor: clade.topColor,
+          bottomColor: clade.bottomColor,
+          topExample: clade.topExample,
+          bottomExample: clade.bottomExample,
+        },
+        game
+      );
+    }
+
     return new Rectangle({
-      color: `hsl(${this.color}, 50%, 50%)`,
       x: 0,
       y: 0,
       width: game.width,
       height: game.height,
+      color: BACKGROUND_COLOR,
+      children: [
+        new Camera(this.cameraState, {
+          children: [makeClade(clades, true)],
+        }),
+        new Dot({
+          x: this.mousePos.x - 1,
+          y: this.mousePos.y - 1,
+          color: "transparent",
+          radius: 1,
+          id: "mouse",
+        }),
+      ],
     });
   }
 
-  update() {
-    this.color += 1;
+  update(game: Game) {
+    this.cameraState.update(game);
+
+    this.mousePos = game.input.getMouseLocation();
+    // this.mousePos = mouse;
+    game.registerCollision("mouse", ".details-indicator", (example) => {
+      if (!this.isClicking && game.input.mouseIsDown()) {
+        console.log(example.id);
+        this.isClicking = true;
+      } else if (!game.input.mouseIsDown()) {
+        this.isClicking = false;
+      }
+    });
   }
 }
