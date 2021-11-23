@@ -5,8 +5,9 @@ import Clade from "./obj/Clade.obj";
 
 import clades from "../data/clades.json";
 import { Camera, CameraState } from "./obj/Camera.obj";
+import publish from "../pubsub/publish";
 
-const BACKGROUND_COLOR = "#f2f2f2";
+const BACKGROUND_COLOR = "#F4F5F6";
 
 interface CladeData {
   label: string;
@@ -83,12 +84,14 @@ export class MainScene extends Scene {
     this.mousePos = game.input.getMouseLocation();
     // this.mousePos = mouse;
     game.registerCollision("mouse", ".details-indicator", (example) => {
+      game.canvasElement.style.cursor = "pointer";
       if (!this.isClicking && game.input.mouseIsDown()) {
-        console.log(example.id);
+        publish("show-details", example.id);
         this.isClicking = true;
       } else if (!game.input.mouseIsDown()) {
         this.isClicking = false;
       }
     });
+    game.canvasElement.style.cursor = "default";
   }
 }

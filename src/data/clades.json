@@ -1,11 +1,20 @@
 {
   "label": "Primates",
   "height": 450,
+  "color": "order",
+  "topColor": "suborder",
+  "bottomColor": "suborder",
   "top": {
     "label": "Strepsirrhini",
+    "color": "suborder",
+    "topColor": "superfamily",
+    "bottomColor": "superfamily",
     "height": 200,
     "top": {
       "label": "Lorisoidea",
+      "color": "superfamily",
+      "topColor": "genus",
+      "bottomColor": "genus",
       "height": 100,
       "top": "Loris",
       "topExample": "Loris lydekkerianus",
@@ -14,9 +23,15 @@
     },
     "bottom": {
       "label": "Lemuroidea",
+      "color": "superfamily",
+      "topColor": "family",
+      "bottomColor": "family",
       "height": 150,
       "top": {
         "label": "Lemuridae",
+        "color": "family",
+        "topColor": "genus",
+        "bottomColor": "genus",
         "height": 100,
         "top": "Lemur",
         "topExample": "Lemur catta",
@@ -30,8 +45,14 @@
   "bottom": {
     "label": "Haplorhini",
     "height": 275,
+    "color": "suborder",
+    "topColor": "infraorder",
+    "bottomColor": "infraorder",
     "bottom": {
       "label": "Tarsiiformes",
+      "color": "infraorder",
+      "topColor": "genus",
+      "bottomColor": "genus",
       "height": 100,
       "top": "Cephalopachus",
       "topExample": "Cephalopacus banacus",
@@ -40,9 +61,15 @@
     },
     "top": {
       "label": "Simiiformes                                                        ",
+      "color": "infraorder",
+      "topColor": "parvorder",
+      "bottomColor": "parvorder",
       "height": 325,
       "top": {
-        "label": "Platyrrhines (New World Monkeys)",
+        "label": "Platyrrhini",
+        "color": "parvorder",
+        "topColor": "family",
+        "bottomColor": "family",
         "top": "Callitrichidae",
         "bottom": "Cebidae",
         "topExample": "Cebuella pygmaea",
@@ -50,35 +77,56 @@
         "height": 100
       },
       "bottom": {
-        "label": "Catarrhines",
+        "label": "Catarrhini",
+        "color": "parvorder",
+        "topColor": "superfamily",
+        "bottomColor": "superfamily",
         "height": 300,
         "top": {
-          "label": "Cercopithecoids (Old World Monkeys)",
+          "label": "Cercopithecoidea",
+          "color": "superfamily",
+          "topColor": "genus",
+          "bottomColor": "genus",
           "top": "Miopithecus",
-          "topExample": "Saimiri sciureus",
+          "topExample": "Miopithecus talapoin",
           "bottom": "Macaca",
           "bottomExample": "Macaca sylvanus",
           "height": 100
         },
         "bottom": {
           "label": "Hominoidea",
+          "color": "superfamily",
+          "topColor": "family",
+          "bottomColor": "family",
           "height": 250,
-          "top": {
+          "bottom": {
             "label": "Hylobatidae",
+            "color": "family",
+            "topColor": "genus",
+            "bottomColor": "genus",
             "top": "Hylobates",
             "topExample": "Hylobates lar",
             "bottom": "Symphalangus",
             "bottomExample": "Symphalangus syndactylus",
             "height": 100
           },
-          "bottom": {
-            "label": "Hominidae           ",
+          "top": {
+            "label": "Hominidae               ",
+            "color": "family",
+            "topColor": "subfamily",
+            "bottomColor": "subfamily",
             "height": 200,
             "top": {
               "label": "Homininae              ",
+              "color": "subfamily",
+              "topColor": "tribe",
+              "bottomColor": "tribe",
               "height": 200,
               "top": {
                 "label": "Hominini",
+                "color": "tribe",
+                "topColor": "genus",
+                "bottomColor": "genus",
                 "height": 200,
                 "top": "Homo",
                 "bottom": "Pan"

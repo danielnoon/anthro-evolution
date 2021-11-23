@@ -3,11 +3,12 @@ import { GObject } from "gamedeck/lib/GObject";
 import { Vector2 } from "gamedeck/lib/Utils";
 import { Text } from "gamedeck/lib/gobjects/Text";
 import { Dot, Rectangle } from "gamedeck/lib/GObjects";
+import COLORS from "../../colors";
 
 const PADDING = 16;
-const THICKNESS = 5;
+const THICKNESS = 6;
 const RISE = 3;
-const FONT = "1.2em DM Sans";
+const FONT = "1.3em DM Sans";
 const FONT_COLOR = "black";
 const LINE_COLOR = "#444444";
 
@@ -25,6 +26,10 @@ interface CladeProps {
   topExample?: string;
   bottomExample?: string;
   hoverState?: string;
+}
+
+function c(color: string) {
+  return COLORS[color] ?? color;
 }
 
 export default class Clade extends GObject {
@@ -94,11 +99,15 @@ export default class Clade extends GObject {
         y: this.cladeProps.height / 2 + RISE,
         width: this.left.x + PADDING * 2,
         height: THICKNESS,
-        color: this.cladeProps.leftColor ?? this.cladeProps.color ?? LINE_COLOR,
+        color: c(
+          this.cladeProps.leftColor ?? this.cladeProps.color ?? LINE_COLOR
+        ),
       }),
       // left text
       new Text({
-        color: this.cladeProps.leftColor ?? this.cladeProps.color ?? FONT_COLOR,
+        color: c(
+          this.cladeProps.leftColor ?? this.cladeProps.color ?? FONT_COLOR
+        ),
         font: FONT,
         text: this.cladeProps.leftLabel ?? "",
         position: new Vector2(PADDING, this.cladeProps.height / 2),
@@ -106,7 +115,9 @@ export default class Clade extends GObject {
       }),
       // branch line
       new Rectangle({
-        color: this.cladeProps.leftColor ?? this.cladeProps.color ?? LINE_COLOR,
+        color: c(
+          this.cladeProps.leftColor ?? this.cladeProps.color ?? LINE_COLOR
+        ),
         x: this.left.x + PADDING * 2,
         y: this.top.y + RISE,
         width: THICKNESS,
@@ -118,11 +129,15 @@ export default class Clade extends GObject {
         y: this.top.y + RISE,
         width: this.top.x + PADDING * 2,
         height: THICKNESS,
-        color: this.cladeProps.topColor ?? this.cladeProps.color ?? LINE_COLOR,
+        color: c(
+          this.cladeProps.topColor ?? this.cladeProps.color ?? LINE_COLOR
+        ),
       }),
       // top text
       new Text({
-        color: this.cladeProps.topColor ?? this.cladeProps.color ?? FONT_COLOR,
+        color: c(
+          this.cladeProps.topColor ?? this.cladeProps.color ?? FONT_COLOR
+        ),
         font: FONT,
         text: this.cladeProps.topLabel,
         position: new Vector2(PADDING * 3 + this.left.x, this.top.y),
@@ -130,8 +145,9 @@ export default class Clade extends GObject {
       }),
       // bottom underline
       new Rectangle({
-        color:
-          this.cladeProps.bottomColor ?? this.cladeProps.color ?? LINE_COLOR,
+        color: c(
+          this.cladeProps.bottomColor ?? this.cladeProps.color ?? LINE_COLOR
+        ),
         x: PADDING * 2 + this.left.x,
         y: this.cladeProps.height - THICKNESS,
         width: this.bottom.x + PADDING * 2,
@@ -139,8 +155,9 @@ export default class Clade extends GObject {
       }),
       // bottom text
       new Text({
-        color:
-          this.cladeProps.bottomColor ?? this.cladeProps.color ?? FONT_COLOR,
+        color: c(
+          this.cladeProps.bottomColor ?? this.cladeProps.color ?? FONT_COLOR
+        ),
         font: FONT,
         text: this.cladeProps.bottomLabel,
         position: new Vector2(
@@ -157,7 +174,7 @@ export default class Clade extends GObject {
         color: this.cladeProps.topExample ? "orange" : "transparent",
         position: new Vector2(
           PADDING * 4 + this.left.x + this.top.x,
-          this.top.y + RISE - 20
+          this.top.y + RISE - 20 + THICKNESS / 2
         ),
         radius: 20,
         className: this.cladeProps.topExample ? "details-indicator" : "",
@@ -167,7 +184,7 @@ export default class Clade extends GObject {
         color: this.cladeProps.bottomExample ? "orange" : "transparent",
         position: new Vector2(
           PADDING * 4 + this.left.x + this.bottom.x,
-          this.cladeProps.height - THICKNESS - 20
+          this.cladeProps.height - THICKNESS / 2 - 20
         ),
         radius: 20,
         className: this.cladeProps.bottomExample ? "details-indicator" : "",

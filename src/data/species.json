@@ -1,0 +1,92 @@
+[
+  {
+    "binomial": "Cebuella pygmaea",
+    "name": "Pygmy marmoset",
+    "status": "vulnerable",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Pygmy_Marmoset_%285336773146%29.jpg",
+    "taxonomy": [
+      "Haplorhini",
+      "Simiiformes",
+      "Platyrrhini",
+      "",
+      "Callitrichidae",
+      "",
+      "",
+      "Cebuella",
+      "pygmaea"
+    ]
+  },
+  {
+    "binomial": "Macaca sylvanus",
+    "name": "Barbary macaque",
+    "status": "endangered",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Macaca_sylvanus.Mother_and_baby.jpg",
+    "taxonomy": [
+      "Haplorhini",
+      "Simiiformes",
+      "Catarrhini",
+      "Cercopithecoidea",
+      "Cercopithecidae",
+      "Cercopithecinae",
+      "Papionini",
+      "Macaca",
+      "sylvanus"
+    ]
+  },
+  {
+    "binomial": "Nycticebus bengalensis",
+    "name": "Bengal slow loris",
+    "status": "endangered",
+    "description": "",
+    "image": "https://res.cloudinary.com/roundglass/image/upload/c_fill,ar_16:9,g_auto/w_1920,q_auto:best,f_auto/v1599206051/roundglass/sustain/bengal-slow-loris-ConservationistShutterstock_nliovw.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lorisoidea",
+      "Lorisidae",
+      "Lorisinae",
+      "",
+      "Nycticebus",
+      "bengalensis"
+    ]
+  },
+  {
+    "binomial": "Daubentonia madagascariensis",
+    "name": "Aye-aye",
+    "status": "endangered",
+    "description": "",
+    "image": "https://lemur.duke.edu/wordpress/wp-content/uploads/2018/08/Screen-Shot-2018-08-29-at-4.05.10-PM-550x400_c.png",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Tarsius spectrum",
+    "name": "Spectral tarsier",
+    "status": "endangered",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Tarsius_tarsier_Tandurusa_zoo.JPG",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  }
+]
