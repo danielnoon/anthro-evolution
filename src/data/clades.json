@@ -36,7 +36,7 @@
         "top": "Lemur",
         "topExample": "Lemur catta",
         "bottom": "Eulemur",
-        "bottomExample": "Euemur rubriventer"
+        "bottomExample": "Eulemur rubriventer"
       },
       "bottom": "Daubentoniidae",
       "bottomExample": "Daubentonia madagascariensis"
@@ -54,8 +54,8 @@
       "topColor": "genus",
       "bottomColor": "genus",
       "height": 100,
-      "top": "Cephalopachus",
-      "topExample": "Cephalopacus banacus",
+      "top": "Carlito",
+      "topExample": "Carlito syrichta",
       "bottom": "Tarsius",
       "bottomExample": "Tarsius spectrum"
     },

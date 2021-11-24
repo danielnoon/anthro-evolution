@@ -88,5 +88,113 @@
       "Daubentonia",
       "madagascariensis"
     ]
+  },
+  {
+    "binomial": "Loris lydekkerianus",
+    "name": "Gray Slender Loris",
+    "status": "near threatened",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Slender_Loris.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Lemur catta",
+    "name": "Ring-tailed lemur",
+    "status": "endangered",
+    "description": "",
+    "image": "https://www.pbs.org/wnet/nature/files/2021/04/pexels-magda-ehlers-3822505.png",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Carlito syrichta",
+    "name": "Philippine Tarsier",
+    "status": "near threatened",
+    "description": "",
+    "image": "https://www.neprimateconservancy.org/uploads/1/5/3/8/15380094/philippine-tarsier-istock-533075115-resize2_orig.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Eulemur rubriventer",
+    "name": "Red-bellied lemur",
+    "status": "vulnerable",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Roodbuikmaki.JPG",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Cebus imitator",
+    "name": "Panamanian white-faced capuchin",
+    "status": "least concern",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cebus_capucinus%2C_Costa_Rica.JPG",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Miopithecus talapoin",
+    "name": "Angolan talapoin",
+    "status": "vulnerable",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Talapoin_II_-_Bioparc_Valencia_%282787418966%29.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
   }
 ]
