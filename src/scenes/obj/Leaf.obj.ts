@@ -1,4 +1,3 @@
-import { Asset } from "gamedeck/lib";
 import { Sprite } from "gamedeck/lib/Assets";
 import { GObject } from "gamedeck/lib/GObject";
 import { Vector2 } from "gamedeck/lib/Utils";

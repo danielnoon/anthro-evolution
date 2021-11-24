@@ -2,7 +2,7 @@ import { Game } from "gamedeck/lib";
 import { GObject } from "gamedeck/lib/GObject";
 import { Vector2 } from "gamedeck/lib/Utils";
 import { Text } from "gamedeck/lib/gobjects/Text";
-import { Dot, Rectangle } from "gamedeck/lib/GObjects";
+import { Rectangle } from "gamedeck/lib/GObjects";
 import COLORS from "../../colors";
 import { Leaf } from "./Leaf.obj";
 
@@ -197,26 +197,6 @@ export default class Clade extends GObject {
             })
           : null,
       ]),
-      // new Dot({
-      //   color: this.cladeProps.topExample ? "orange" : "transparent",
-      //   position: new Vector2(
-      //     PADDING * 4 + this.left.x + this.top.x,
-      //     this.top.y + RISE - 20 + THICKNESS / 2
-      //   ),
-      //   radius: 20,
-      //   className: this.cladeProps.topExample ? "details-indicator" : "",
-      //   id: `${this.cladeProps.topExample}`,
-      // }),
-      // new Dot({
-      //   color: this.cladeProps.bottomExample ? "orange" : "transparent",
-      //   position: new Vector2(
-      //     PADDING * 4 + this.left.x + this.bottom.x,
-      //     this.cladeProps.height - THICKNESS / 2 - 20
-      //   ),
-      //   radius: 20,
-      //   className: this.cladeProps.bottomExample ? "details-indicator" : "",
-      //   id: `${this.cladeProps.bottomExample}`,
-      // }),
     ];
   }
 }
