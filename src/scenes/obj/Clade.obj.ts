@@ -4,6 +4,7 @@ import { Vector2 } from "gamedeck/lib/Utils";
 import { Text } from "gamedeck/lib/gobjects/Text";
 import { Dot, Rectangle } from "gamedeck/lib/GObjects";
 import COLORS from "../../colors";
+import { Leaf } from "./Leaf.obj";
 
 const PADDING = 16;
 const THICKNESS = 6;
@@ -30,6 +31,10 @@ interface CladeProps {
 
 function c(color: string) {
   return COLORS[color] ?? color;
+}
+
+function filterNulls<T>(arr: (T | null)[]): T[] {
+  return arr.filter((x) => x !== null) as T[];
 }
 
 export default class Clade extends GObject {
@@ -170,26 +175,48 @@ export default class Clade extends GObject {
       ...child(0),
       ...child(1),
       // examples
-      new Dot({
-        color: this.cladeProps.topExample ? "orange" : "transparent",
-        position: new Vector2(
-          PADDING * 4 + this.left.x + this.top.x,
-          this.top.y + RISE - 20 + THICKNESS / 2
-        ),
-        radius: 20,
-        className: this.cladeProps.topExample ? "details-indicator" : "",
-        id: `${this.cladeProps.topExample}`,
-      }),
-      new Dot({
-        color: this.cladeProps.bottomExample ? "orange" : "transparent",
-        position: new Vector2(
-          PADDING * 4 + this.left.x + this.bottom.x,
-          this.cladeProps.height - THICKNESS / 2 - 20
-        ),
-        radius: 20,
-        className: this.cladeProps.bottomExample ? "details-indicator" : "",
-        id: `${this.cladeProps.bottomExample}`,
-      }),
+      ...filterNulls<Leaf>([
+        this.cladeProps.topExample
+          ? new Leaf({
+              position: new Vector2(
+                PADDING * 4 + this.left.x + this.top.x - 4,
+                this.top.y + RISE - 20 + THICKNESS / 2 - 14
+              ),
+              className: "details-indicator",
+              id: this.cladeProps.topExample,
+            })
+          : null,
+        this.cladeProps.bottomExample
+          ? new Leaf({
+              position: new Vector2(
+                PADDING * 4 + this.left.x + this.bottom.x - 4,
+                this.cladeProps.height - THICKNESS / 2 - 34
+              ),
+              className: "details-indicator",
+              id: this.cladeProps.bottomExample,
+            })
+          : null,
+      ]),
+      // new Dot({
+      //   color: this.cladeProps.topExample ? "orange" : "transparent",
+      //   position: new Vector2(
+      //     PADDING * 4 + this.left.x + this.top.x,
+      //     this.top.y + RISE - 20 + THICKNESS / 2
+      //   ),
+      //   radius: 20,
+      //   className: this.cladeProps.topExample ? "details-indicator" : "",
+      //   id: `${this.cladeProps.topExample}`,
+      // }),
+      // new Dot({
+      //   color: this.cladeProps.bottomExample ? "orange" : "transparent",
+      //   position: new Vector2(
+      //     PADDING * 4 + this.left.x + this.bottom.x,
+      //     this.cladeProps.height - THICKNESS / 2 - 20
+      //   ),
+      //   radius: 20,
+      //   className: this.cladeProps.bottomExample ? "details-indicator" : "",
+      //   id: `${this.cladeProps.bottomExample}`,
+      // }),
     ];
   }
 }

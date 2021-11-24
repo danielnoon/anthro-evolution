@@ -196,5 +196,41 @@
       "Daubentonia",
       "madagascariensis"
     ]
+  },
+  {
+    "binomial": "Hylobates lar",
+    "name": "Lar gibbon",
+    "status": "endangered",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Hylobates-lar-02-Chiang-Mai.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Symphalangus syndactylus",
+    "name": "Siamang",
+    "status": "endangered",
+    "description": "",
+    "image": "https://nationalzoo.si.edu/sites/default/files/animals/20181114-skipbrown085.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
   }
 ]
