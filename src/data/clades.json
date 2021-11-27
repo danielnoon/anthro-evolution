@@ -129,7 +129,8 @@
                 "bottomColor": "genus",
                 "height": 200,
                 "top": "Homo",
-                "bottom": "Pan"
+                "bottom": "Pan",
+                "bottomExample": "Pan troglodytes"
               },
               "bottom": "Gorillini",
               "bottomExample": "Gorilla gorilla"

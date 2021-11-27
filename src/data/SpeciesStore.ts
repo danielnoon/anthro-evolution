@@ -4,7 +4,17 @@ interface Species {
   binomial: string;
   image: string;
   name: string;
+  description: string;
+  taxonomy: string[];
 }
+
+species.forEach((s) => {
+  const link = document.createElement("link");
+  link.rel = "preload";
+  link.href = s.image;
+  link.as = "image";
+  document.head.appendChild(link);
+});
 
 export default class SpeciesStore {
   public static get all(): Species[] {

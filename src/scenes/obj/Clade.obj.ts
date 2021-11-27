@@ -9,7 +9,7 @@ import { Leaf } from "./Leaf.obj";
 const PADDING = 16;
 const THICKNESS = 6;
 const RISE = 3;
-const FONT = "1.3em DM Sans";
+const FONT = "500 1.8em Caveat";
 const FONT_COLOR = "black";
 const LINE_COLOR = "#444444";
 

@@ -3,6 +3,9 @@ import React from "react";
 import SpeciesStore from "../data/SpeciesStore";
 import publish from "../pubsub/publish";
 import useSubscription from "../pubsub/useSubscription";
+import CloseIcon from "@mui/icons-material/Close";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import Taxonomy from "./Taxonomy";
 
 const PADDING = 20;
 
@@ -66,9 +69,9 @@ const content = css`
   }
 `;
 
-const closeButton = css`
+const contextButton = (top: number) => css`
   position: absolute;
-  top: 10px;
+  top: ${top}px;
   right: 10px;
   width: 40px;
   height: 40px;
@@ -96,31 +99,29 @@ export default function Sidebar() {
       <div className={[backdrop, state].join(" ")}></div>
       <div className={[dialog, state].join(" ")}>
         <button
-          className={closeButton}
+          className={contextButton(10)}
           onClick={() => publish("show-details", null)}
         >
-          &times;
+          <CloseIcon />
         </button>
         {species && (
           <>
+            <button
+              className={contextButton(60)}
+              onClick={() => window.open(species.image)}
+            >
+              <OpenInNewIcon />
+            </button>
             <img src={species.image} alt={species.name} width="100%" />
             <div className={content}>
               <h2>
                 {species.name} <br />
                 <small className="binomial">{species.binomial}</small>
               </h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                iste nobis sapiente impedit dignissimos nostrum fuga quam, vero
-                inventore veniam error illum enim totam deleniti, necessitatibus
-                velit dolores fugit! Iusto?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tempora, ex. Explicabo veniam debitis odit, numquam voluptatem
-                nesciunt enim voluptatum molestias! Iste repudiandae rem illo
-                aliquid explicabo at labore maiores quibusdam!
-              </p>
+              {species.description.split("\n").map((line, i) => (
+                <p key={i}>{line}</p>
+              ))}
+              <Taxonomy names={species.taxonomy} />
             </div>
           </>
         )}

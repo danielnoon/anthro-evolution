@@ -86,8 +86,10 @@ export class MainScene extends Scene {
     game.registerCollision("mouse", ".details-indicator", (example) => {
       game.canvasElement.style.cursor = "pointer";
       if (!this.isClicking && game.input.mouseIsDown()) {
-        publish("show-details", example.id);
         this.isClicking = true;
+      } else if (this.isClicking && !game.input.mouseIsDown()) {
+        publish("show-details", example.id);
+        this.isClicking = false;
       } else if (!game.input.mouseIsDown()) {
         this.isClicking = false;
       }

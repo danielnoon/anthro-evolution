@@ -93,18 +93,18 @@
     "binomial": "Loris lydekkerianus",
     "name": "Gray Slender Loris",
     "status": "near threatened",
-    "description": "",
+    "description": "The gray slender loris is a species of primate in the family Lorisidae. It is native to India and Sri Lanka and inhabits subtropical and tropical dry forests and subtropical or tropical moist lowland forests.\n\nSlender lorises are recognised for having extremely gracile limbs and extreme stereoscopic vision. The gray slender loris has a wide variation in pelage colour and each subspecies can be identified by this. The fur is short and gray or reddish on their backs, sometimes a darker stripe extends from the top of their head to the end of their back. The ventrum is white or buff-coloured. The eyes are surrounded with darker fur and have orbits which look straight forward giving excellent stereoscopic vision and are located the closest together amongst the primates. Between the eyes there is a white patch of hair known as the median stripe. The muzzle is larger and less pointed than the red slender loris. The hands are also highly specialised with a reduced second digit that allows the loris to cling to small branches. This is further augmented by adaptions in the first metatarsal that are thought to allow an extremely firm grasp. The tail is vestigial.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Slender_Loris.jpg",
     "taxonomy": [
       "Strepsirrhini",
       "Lemuriformes",
       "",
-      "Lemuroidea",
-      "Daubentoniidae",
+      "Lorisoidea",
+      "Lorisidae",
       "",
       "",
-      "Daubentonia",
-      "madagascariensis"
+      "Loris",
+      "lydekkerianus"
     ]
   },
   {
@@ -221,6 +221,60 @@
     "status": "endangered",
     "description": "",
     "image": "https://nationalzoo.si.edu/sites/default/files/animals/20181114-skipbrown085.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Pongo pygmaeus",
+    "name": "Bornean orangutan",
+    "status": "critically endangered",
+    "description": "",
+    "image": "https://live.staticflickr.com/7885/46833957704_e2ba1c1b0e_o_d.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Gorilla gorilla",
+    "name": "Western gorilla",
+    "status": "critically endangered",
+    "description": "",
+    "image": "https://files.worldwildlife.org/wwfcmsprod/images/HERO_Mountain_Gorilla_Silverback_WW22557/story_full_width/5zoaj3l0f_Mountain_Gorilla_Silverback_WW22557.jpg",
+    "taxonomy": [
+      "Strepsirrhini",
+      "Lemuriformes",
+      "",
+      "Lemuroidea",
+      "Daubentoniidae",
+      "",
+      "",
+      "Daubentonia",
+      "madagascariensis"
+    ]
+  },
+  {
+    "binomial": "Pan troglodytes",
+    "name": "Chimpanzee",
+    "status": "endangered",
+    "description": "",
+    "image": "https://cdn.mos.cms.futurecdn.net/26MWT6NHVvQMbLKpmnMjDR-970-80.jpg.webp",
     "taxonomy": [
       "Strepsirrhini",
       "Lemuriformes",
