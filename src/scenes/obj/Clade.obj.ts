@@ -5,9 +5,10 @@ import { Text } from "gamedeck/lib/gobjects/Text";
 import { Rectangle } from "gamedeck/lib/GObjects";
 import COLORS from "../../colors";
 import { Leaf } from "./Leaf.obj";
+import RoughRectangle from "./RoughRectangle.obj";
 
 const PADDING = 16;
-const THICKNESS = 6;
+const THICKNESS = 4;
 const RISE = 3;
 const FONT = "500 1.8em Caveat";
 const FONT_COLOR = "black";
@@ -99,15 +100,20 @@ export default class Clade extends GObject {
 
     return [
       // left underline
-      new Rectangle({
-        x: 0,
-        y: this.cladeProps.height / 2 + RISE,
-        width: this.left.x + PADDING * 2,
-        height: THICKNESS,
-        color: c(
-          this.cladeProps.leftColor ?? this.cladeProps.color ?? LINE_COLOR
-        ),
-      }),
+      ...filterNulls([
+        this.cladeProps.leftLabel
+          ? new RoughRectangle({
+              x: 0,
+              y: this.cladeProps.height / 2 + RISE,
+              width: this.left.x + PADDING * 2,
+              height: THICKNESS,
+              color: c(
+                this.cladeProps.leftColor ?? this.cladeProps.color ?? LINE_COLOR
+              ),
+              id: `left_underline_${this.cladeProps.leftLabel}_${this.cladeProps.bottomLabel}`,
+            })
+          : null,
+      ]),
       // left text
       new Text({
         color: c(
@@ -119,7 +125,7 @@ export default class Clade extends GObject {
         positioning: "middle left",
       }),
       // branch line
-      new Rectangle({
+      new RoughRectangle({
         color: c(
           this.cladeProps.leftColor ?? this.cladeProps.color ?? LINE_COLOR
         ),
@@ -127,16 +133,18 @@ export default class Clade extends GObject {
         y: this.top.y + RISE,
         width: THICKNESS,
         height: this.cladeProps.height - this.top.y - RISE,
+        id: `branch_stem_${this.cladeProps.leftLabel}_${this.cladeProps.bottomLabel}`,
       }),
       // top underline
-      new Rectangle({
+      new RoughRectangle({
         x: PADDING * 2 + this.left.x,
         y: this.top.y + RISE,
-        width: this.top.x + PADDING * 2,
+        width: this.top.x + PADDING * 2 * (this.cladeProps.topExample ? 1 : 2),
         height: THICKNESS,
         color: c(
           this.cladeProps.topColor ?? this.cladeProps.color ?? LINE_COLOR
         ),
+        id: `top_underline_${this.cladeProps.leftLabel}_${this.cladeProps.bottomLabel}`,
       }),
       // top text
       new Text({
@@ -149,14 +157,16 @@ export default class Clade extends GObject {
         positioning: "top left",
       }),
       // bottom underline
-      new Rectangle({
+      new RoughRectangle({
         color: c(
           this.cladeProps.bottomColor ?? this.cladeProps.color ?? LINE_COLOR
         ),
         x: PADDING * 2 + this.left.x,
         y: this.cladeProps.height - THICKNESS,
-        width: this.bottom.x + PADDING * 2,
+        width:
+          this.bottom.x + PADDING * 2 * (this.cladeProps.bottomExample ? 1 : 2),
         height: THICKNESS,
+        id: `bottom_underline_${this.cladeProps.leftLabel}_${this.cladeProps.bottomLabel}`,
       }),
       // bottom text
       new Text({
