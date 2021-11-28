@@ -5,10 +5,20 @@ import Sidebar from "./components/Sidebar";
 import { MainScene } from "./scenes/Main.scene";
 
 const canvas = document.querySelector<HTMLCanvasElement>("#view")!;
-// canvas.width = document.body.getBoundingClientRect().width;
-// canvas.height = document.body.getBoundingClientRect().height;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-startGame(new MainScene(), { canvas, debug: false, eventTarget: canvas });
+const game = startGame(new MainScene(), {
+  canvas,
+  debug: false,
+  eventTarget: canvas,
+});
 render(<Sidebar />, document.querySelector("#sidebar")!);
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  game.width = canvas.width;
+  game.height = canvas.height;
+});

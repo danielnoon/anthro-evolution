@@ -32,6 +32,7 @@ const dialog = css`
   top: ${PADDING}px;
   right: ${PADDING}px;
   width: 500px;
+  max-width: calc(100% - ${PADDING * 2}px);
   height: calc(100% - ${PADDING * 2}px);
   background-color: #fff;
   border-radius: 20px;
@@ -43,6 +44,16 @@ const dialog = css`
 
   &.closed {
     transform: translateX(100%);
+  }
+
+  @media (max-width: 600px) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
   }
 `;
 
@@ -109,6 +120,10 @@ const title = css`
     font-weight: 400;
     font-size: 1em;
     color: #222;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
   }
 `;
 

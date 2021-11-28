@@ -6,6 +6,7 @@ import Clade from "./obj/Clade.obj";
 import clades from "../data/clades.json";
 import { Camera, CameraState } from "./obj/Camera.obj";
 import publish from "../pubsub/publish";
+import Background from "./obj/Background.obj";
 
 const BACKGROUND_COLOR = "#F4F5F6";
 
@@ -64,6 +65,7 @@ export class MainScene extends Scene {
       height: game.height,
       color: BACKGROUND_COLOR,
       children: [
+        new Background(),
         new Camera(this.cameraState, {
           children: [makeClade(clades, true)],
         }),
