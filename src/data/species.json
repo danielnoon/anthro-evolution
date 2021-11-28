@@ -57,7 +57,7 @@
     "binomial": "Daubentonia madagascariensis",
     "name": "Aye-aye",
     "status": "endangered",
-    "description": "",
+    "description": "The aye-aye is a long-fingered lemur, Madagascan primate with rodent-like teeth that perpetually grow, and a special thin middle finger used for percussive foraging. It is the world's largest nocturnal primate and is characterized by its unusual method of finding food: it taps on trees to find grubs, then gnaws holes in the wood using its forward-slanting incisors to create a small hole into which it inserts its narrow middle finger to pull the grubs out.\nYoung aye-ayes typically are silver colored on their front and have a stripe down their back. However, as the aye-ayes begin to reach maturity, their bodies will be completely covered in thick fur and are typically not one solid color. On the head and back, the ends of the hair are typically tipped with white while the rest of the body will ordinarily be a yellow and/or brown color.\nAmong the aye-aye's signature traits are its fingers. The third finger, which is much thinner than the others, is used for tapping, while the fourth finger, the longest, is used for pulling grubs and insects out of trees, using the hooked nail. The skinny middle finger is unique in the animal kingdom in that it possesses a ball-and-socket metacarpophalangeal joint. The aye-aye has also evolved a sixth digit, a pseudothumb, to aid in gripping.\nThe complex geometry of ridges on the inner surface of aye-aye ears helps to sharply focus not only echolocation signals from the tapping of its finger, but also to passively listen for any other sound produced by the prey. These ridges can be regarded as the acoustic equivalent of a Fresnel lens, and may be seen in a large variety of unrelated animals, such as lesser galago, bat-eared fox, mouse lemur, and others.",
     "image": "https://lemur.duke.edu/wordpress/wp-content/uploads/2018/08/Screen-Shot-2018-08-29-at-4.05.10-PM-550x400_c.png",
     "taxonomy": [
       "Strepsirrhini",
@@ -147,18 +147,18 @@
     "binomial": "Eulemur rubriventer",
     "name": "Red-bellied lemur",
     "status": "vulnerable",
-    "description": "",
+    "description": "The red-bellied lemur is medium-sized with a luxuriant chestnut brown coat. This lemur is endemic to eastern Madagascan rainforests and is distinguished by patches of white skin below the eyes, giving rise to a \"teardrop\" effect, particularly conspicuous in the male. The species exhibits diurnal behavior and marked sexual dimorphism.\nBeing sexually dimorphic, the males the species exhibit a medium-long, dense dorsal coat of intense chestnut brown. Ventrally, they are lighter and redder in hue, while their tail, muzzle and head are black. For females, the dorsal area and tail resemble males, whereas the ventral fur is a contrasting white-cream color. Facial markings are similar to males, except that \"tear drops\" are less exaggerated and spiry thick cheek hairs of males are absent. Whereas the genus Eulemur relatives may exhibit ear tufts or a furry beard, these features are absent for E. rubriventer, which has thickened fur around its ears, lending a fuller facial appearance.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Roodbuikmaki.JPG",
     "taxonomy": [
       "Strepsirrhini",
       "Lemuriformes",
       "",
       "Lemuroidea",
-      "Daubentoniidae",
+      "Lemuridae",
       "",
       "",
-      "Daubentonia",
-      "madagascariensis"
+      "Eulemur",
+      "rubriventer"
     ]
   },
   {
