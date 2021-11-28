@@ -79,6 +79,11 @@ const content = css`
       font-style: italic;
     }
   }
+
+  & p {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
 `;
 
 const contextButton = (top: number) => css`

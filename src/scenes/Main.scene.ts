@@ -27,6 +27,7 @@ export class MainScene extends Scene {
   cameraState = new CameraState();
   mousePos = new Vector2(0, 0);
   isClicking = false;
+  clickStart = new Vector2(0, 0);
 
   build(game: Game) {
     function isSubClade(c: string | CladeData): c is CladeData {
@@ -84,13 +85,16 @@ export class MainScene extends Scene {
     this.cameraState.update(game);
 
     this.mousePos = game.input.getMouseLocation();
-    // this.mousePos = mouse;
+
     game.registerCollision("mouse", ".details-indicator", (example) => {
       game.canvasElement.style.cursor = "pointer";
       if (!this.isClicking && game.input.mouseIsDown()) {
         this.isClicking = true;
+        this.clickStart = this.mousePos.clone();
       } else if (this.isClicking && !game.input.mouseIsDown()) {
-        publish("show-details", example.id);
+        if (this.clickStart.add(this.mousePos.invert()).getMagnitude() < 10) {
+          publish("show-details", example.id);
+        }
         this.isClicking = false;
       } else if (!game.input.mouseIsDown()) {
         this.isClicking = false;

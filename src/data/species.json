@@ -39,7 +39,7 @@
     "binomial": "Nycticebus bengalensis",
     "name": "Bengal slow loris",
     "status": "endangered",
-    "description": "The Bengal slow loris is a strepsirrhine primate and a species of slow loris native to the Indian subcontinent and Indochina. It is the largest species of slow loris, measuring 10 to 15 in from head to tail and weighing between 2.2 and 4.6 lb. Like other slow lorises, it has a wet nose, a round head, flat face, large eyes, small ears, a vestigial tail, and dense, woolly fur. The toxin it secretes from its brachial gland differs chemically from that of other slow loris species and may be used to communicate information about sex, age, health, and social status.\nThe Bengal slow loris is nocturnal and arboreal, occurring in both evergreen and deciduous forests. It prefers rainforests with dense canopies, and its presence in its native habitat indicates a healthy ecosystem. It is a seed disperser and pollinator, as well as a prey item for carnivores. Its diet primarily consists of fruit, but also includes insects, tree gum, snails, and small vertebrates. In winter, it relies on plant exudates, such as sap and tree gum. The species lives in small family groups, marks its territory with urine, and sleeps during the day by curling up in dense vegetation or in tree holes. It is a seasonal breeder, reproducing once every 12–18 months and usually giving birth to a single offspring. For the first three months, mothers carry their offspring, which reach sexual maturity at around 20 months. The Bengal slow loris can live up to 20 years.",
+    "description": "The Bengal slow loris is a strepsirrhine primate and a species of slow loris native to the Indian subcontinent and Indochina. It is the largest species of slow loris, measuring 10 to 15 inches from head to tail and weighing between 2.2 and 4.6 pounds. Like other slow lorises, it has a wet nose, a round head, flat face, large eyes, small ears, a vestigial tail, and dense, woolly fur. The toxin it secretes from its brachial gland differs chemically from that of other slow loris species and may be used to communicate information about sex, age, health, and social status.\nThe Bengal slow loris is nocturnal and arboreal, occurring in both evergreen and deciduous forests. It prefers rainforests with dense canopies, and its presence in its native habitat indicates a healthy ecosystem. It is a seed disperser and pollinator, as well as a prey item for carnivores. Its diet primarily consists of fruit, but also includes insects, tree gum, snails, and small vertebrates. In winter, it relies on plant exudates, such as sap and tree gum. The species lives in small family groups, marks its territory with urine, and sleeps during the day by curling up in dense vegetation or in tree holes. It is a seasonal breeder, reproducing once every 12–18 months and usually giving birth to a single offspring. For the first three months, mothers carry their offspring, which reach sexual maturity at around 20 months. The Bengal slow loris can live up to 20 years.",
     "image": "https://res.cloudinary.com/roundglass/image/upload/c_fill,ar_16:9,g_auto/w_1920,q_auto:best,f_auto/v1599206051/roundglass/sustain/bengal-slow-loris-ConservationistShutterstock_nliovw.jpg",
     "taxonomy": [
       "Strepsirrhini",
@@ -51,13 +51,14 @@
       "",
       "Nycticebus",
       "bengalensis"
-    ]
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Bengal_slow_loris"
   },
   {
     "binomial": "Daubentonia madagascariensis",
     "name": "Aye-aye",
     "status": "endangered",
-    "description": "The aye-aye is a long-fingered lemur, Madagascan primate with rodent-like teeth that perpetually grow, and a special thin middle finger used for percussive foraging. It is the world's largest nocturnal primate and is characterized by its unusual method of finding food: it taps on trees to find grubs, then gnaws holes in the wood using its forward-slanting incisors to create a small hole into which it inserts its narrow middle finger to pull the grubs out.\nYoung aye-ayes typically are silver colored on their front and have a stripe down their back. However, as the aye-ayes begin to reach maturity, their bodies will be completely covered in thick fur and are typically not one solid color. On the head and back, the ends of the hair are typically tipped with white while the rest of the body will ordinarily be a yellow and/or brown color.\nAmong the aye-aye's signature traits are its fingers. The third finger, which is much thinner than the others, is used for tapping, while the fourth finger, the longest, is used for pulling grubs and insects out of trees, using the hooked nail. The skinny middle finger is unique in the animal kingdom in that it possesses a ball-and-socket metacarpophalangeal joint. The aye-aye has also evolved a sixth digit, a pseudothumb, to aid in gripping.\nThe complex geometry of ridges on the inner surface of aye-aye ears helps to sharply focus not only echolocation signals from the tapping of its finger, but also to passively listen for any other sound produced by the prey. These ridges can be regarded as the acoustic equivalent of a Fresnel lens, and may be seen in a large variety of unrelated animals, such as lesser galago, bat-eared fox, mouse lemur, and others.",
+    "description": "The aye-aye is a long-fingered lemur with rodent-like teeth that perpetually grow, and a special thin middle finger used for percussive foraging. It is the world's largest nocturnal primate and is characterized by its unusual method of finding food: it taps on trees to find grubs, then gnaws holes in the wood using its forward-slanting incisors to create a small hole into which it inserts its narrow middle finger to pull the grubs out.\nYoung aye-ayes typically are silver colored on their front and have a stripe down their back. However, as the aye-ayes begin to reach maturity, their bodies will be completely covered in thick fur and are typically not one solid color. On the head and back, the ends of the hair are typically tipped with white while the rest of the body will ordinarily be a yellow and/or brown color.\nAmong the aye-aye's signature traits are its fingers. The third finger, which is much thinner than the others, is used for tapping, while the fourth finger, the longest, is used for pulling grubs and insects out of trees, using the hooked nail. The skinny middle finger is unique in the animal kingdom in that it possesses a ball-and-socket metacarpophalangeal joint. The aye-aye has also evolved a sixth digit, a pseudothumb, to aid in gripping.\nThe complex geometry of ridges on the inner surface of aye-aye ears helps to sharply focus not only echolocation signals from the tapping of its finger, but also to passively listen for any other sound produced by the prey. These ridges can be regarded as the acoustic equivalent of a Fresnel lens, and may be seen in a large variety of unrelated animals, such as lesser galago, bat-eared fox, mouse lemur, and others.",
     "image": "https://lemur.duke.edu/wordpress/wp-content/uploads/2018/08/Screen-Shot-2018-08-29-at-4.05.10-PM-550x400_c.png",
     "taxonomy": [
       "Strepsirrhini",
@@ -69,12 +70,14 @@
       "",
       "Daubentonia",
       "madagascariensis"
-    ]
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Aye-aye",
+    "references": []
   },
   {
     "binomial": "Tarsius spectrum",
     "name": "Spectral tarsier",
-    "status": "endangered",
+    "status": "vulnerable",
     "description": "",
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Tarsius_tarsier_Tandurusa_zoo.JPG",
     "taxonomy": [
@@ -105,7 +108,9 @@
       "",
       "Loris",
       "lydekkerianus"
-    ]
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Gray_Slender_Loris",
+    "references": []
   },
   {
     "binomial": "Lemur catta",
@@ -129,18 +134,18 @@
     "binomial": "Carlito syrichta",
     "name": "Philippine Tarsier",
     "status": "near threatened",
-    "description": "",
+    "description": "The Philippine tarsier, known locally as mawumag, is a species of tarsier endemic to the Philippines. It is found in the southeastern part of the archipelago. It is a member of the approximately 45-million-year-old family Tarsiidae, whose name is derived from its elongated \"tarsus\" or ankle bone. Formerly a member of the genus Tarsius, it is now listed as the only member of the genus Carlito, a new genus named after the conservationist Carlito Pizarras\nThis tarsier measures 3.35 to 6.30 inches in height, making it one of the smallest primates. The small size makes it difficult to spot. The mass for males is between 2.8–5.6 ounces, usually lighter for females, somewhat heavier than other tarsiers such as the pygmy tarsier. The average adult is about the size of an adult human fist.\nThe Philippine tarsier has thin, rough fur which is colored gray to dark brown. The narrow tail, usually used for balance, is bald except for a tuft of hair at the end, and is about twice the body length. Its elongated tarsus allows it to jump at least 3 meters from tree to tree. Its long digits are tipped with rounded pads that allow C. syrichta to cling easily to trees and to grip almost any surface. The thumb is not truly opposable, but the first toe is. All of the digits have flattened nails, except for the second and third toes, which have sharp claws specialized for grooming.",
     "image": "https://www.neprimateconservancy.org/uploads/1/5/3/8/15380094/philippine-tarsier-istock-533075115-resize2_orig.jpg",
     "taxonomy": [
-      "Strepsirrhini",
-      "Lemuriformes",
-      "",
-      "Lemuroidea",
-      "Daubentoniidae",
+      "Haplorhini",
+      "Tarsiiformes",
       "",
       "",
-      "Daubentonia",
-      "madagascariensis"
+      "Tarsiidae",
+      "",
+      "",
+      "Carlito",
+      "syrichta"
     ]
   },
   {

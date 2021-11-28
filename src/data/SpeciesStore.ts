@@ -6,6 +6,7 @@ interface Species {
   name: string;
   description: string;
   taxonomy: string[];
+  wikipedia?: string;
 }
 
 species.forEach((s) => {
