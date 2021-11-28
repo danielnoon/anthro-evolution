@@ -40,8 +40,8 @@ export class MainScene extends Scene {
         {
           bottomLabel: b,
           topLabel: t,
-          leftLabel: root ? "Primates" : "",
-          position: new Vector2(0, root ? 375 : 0),
+          leftLabel: root ? "Primates             " : "",
+          position: new Vector2(0, root ? 380 : 0),
           height: clade.height,
           children: [
             isSubClade(clade.top) ? makeClade(clade.top, false) : null,

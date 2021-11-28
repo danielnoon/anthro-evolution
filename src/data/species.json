@@ -39,7 +39,7 @@
     "binomial": "Nycticebus bengalensis",
     "name": "Bengal slow loris",
     "status": "endangered",
-    "description": "",
+    "description": "The Bengal slow loris is a strepsirrhine primate and a species of slow loris native to the Indian subcontinent and Indochina. It is the largest species of slow loris, measuring 10 to 15 in from head to tail and weighing between 2.2 and 4.6 lb. Like other slow lorises, it has a wet nose, a round head, flat face, large eyes, small ears, a vestigial tail, and dense, woolly fur. The toxin it secretes from its brachial gland differs chemically from that of other slow loris species and may be used to communicate information about sex, age, health, and social status.\nThe Bengal slow loris is nocturnal and arboreal, occurring in both evergreen and deciduous forests. It prefers rainforests with dense canopies, and its presence in its native habitat indicates a healthy ecosystem. It is a seed disperser and pollinator, as well as a prey item for carnivores. Its diet primarily consists of fruit, but also includes insects, tree gum, snails, and small vertebrates. In winter, it relies on plant exudates, such as sap and tree gum. The species lives in small family groups, marks its territory with urine, and sleeps during the day by curling up in dense vegetation or in tree holes. It is a seasonal breeder, reproducing once every 12–18 months and usually giving birth to a single offspring. For the first three months, mothers carry their offspring, which reach sexual maturity at around 20 months. The Bengal slow loris can live up to 20 years.",
     "image": "https://res.cloudinary.com/roundglass/image/upload/c_fill,ar_16:9,g_auto/w_1920,q_auto:best,f_auto/v1599206051/roundglass/sustain/bengal-slow-loris-ConservationistShutterstock_nliovw.jpg",
     "taxonomy": [
       "Strepsirrhini",
@@ -111,18 +111,18 @@
     "binomial": "Lemur catta",
     "name": "Ring-tailed lemur",
     "status": "endangered",
-    "description": "",
+    "description": "The ring-tailed lemur is highly social, living in groups of up to 30 individuals, and is female dominant. To keep warm and reaffirm social bonds, groups will often huddle together. The ring-tailed lemur will also sunbathe, sitting upright facing its underside, with its thinner white fur towards the sun. Like other lemurs, this species relies strongly on its sense of smell and marks its territory with scent glands. The males perform a unique scent marking behavior called spur marking and will participate in stink fights by marking their tail with their scent and wafting it at opponents. It is omnivorous and the most terrestrial of extant lemurs. The animal is diurnal, being active exclusively in daylight hours.\nAs one of the most vocal primates, the ring-tailed lemur uses numerous vocalizations including group cohesion and alarm calls. Experiments have shown that the ring-tailed lemur, despite the lack of a large brain, can organize sequences, understand basic arithmetic operations and preferentially select tools based on functional qualities.",
     "image": "https://www.pbs.org/wnet/nature/files/2021/04/pexels-magda-ehlers-3822505.png",
     "taxonomy": [
       "Strepsirrhini",
       "Lemuriformes",
       "",
       "Lemuroidea",
-      "Daubentoniidae",
+      "Lemuridae",
       "",
       "",
-      "Daubentonia",
-      "madagascariensis"
+      "Lemur",
+      "catta"
     ]
   },
   {

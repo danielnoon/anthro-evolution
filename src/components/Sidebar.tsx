@@ -6,6 +6,7 @@ import useSubscription from "../pubsub/useSubscription";
 import CloseIcon from "@mui/icons-material/Close";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Taxonomy from "./Taxonomy";
+import Legend from "./Legend";
 
 const PADDING = 20;
 
@@ -88,6 +89,29 @@ const contextButton = (top: number) => css`
   line-height: 0;
 `;
 
+const title = css`
+  position: absolute;
+  top: ${PADDING}px;
+  left: ${PADDING}px;
+  display: inline-block;
+  padding: 1em 1.4em;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(10, 10, 20, 0.2);
+
+  & > h1 {
+    font-size: 1.8em;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  & .attribution {
+    font-weight: 400;
+    font-size: 1em;
+    color: #222;
+  }
+`;
+
 export default function Sidebar() {
   const binomial = useSubscription<string>("show-details");
   const state = binomial !== null ? "open" : "closed";
@@ -97,6 +121,11 @@ export default function Sidebar() {
   return (
     <div>
       <div className={[backdrop, state].join(" ")}></div>
+      <div className={title}>
+        <h1>Human Relatives</h1>
+        <small className="attribution">By Daniel Noon</small>
+      </div>
+      <Legend />
       <div className={[dialog, state].join(" ")}>
         <button
           className={contextButton(10)}

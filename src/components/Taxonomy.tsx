@@ -1,5 +1,5 @@
 import React from "react";
-import { izip } from "itertools";
+import { zip } from "itertools";
 import { css } from "@emotion/css";
 import COLORS from "../colors";
 
@@ -24,9 +24,7 @@ const levelItem = (level: string) => css`
 `;
 
 export default function Taxonomy({ names }: Props) {
-  const sortedLevels = [...izip(levels, names)].filter(
-    ([, name]) => name.length > 0
-  );
+  const sortedLevels = zip(levels, names).filter(([, name]) => name);
 
   return (
     <ul>
