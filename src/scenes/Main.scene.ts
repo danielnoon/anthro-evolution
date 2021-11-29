@@ -11,6 +11,9 @@ import RoughRectangle from "./obj/RoughRectangle.obj";
 import { Text } from "gamedeck/lib/gobjects/Text";
 
 const BACKGROUND_COLOR = "#F4F5F6";
+const BORDER_COLOR = "#444";
+const BORDER_WIDTH = 15;
+const BORDER_STYLE = "solid";
 
 interface CladeData {
   label: string;
@@ -44,33 +47,33 @@ export class MainScene extends Scene {
         x: -80,
         y: -60,
         width: 2225,
-        height: 14,
-        color: "black",
-        style: "cross-hatch",
+        height: BORDER_WIDTH,
+        color: BORDER_COLOR,
+        style: BORDER_STYLE,
       }),
       new RoughRectangle({
         x: -100,
         y: -30,
-        width: 14,
+        width: BORDER_WIDTH,
         height: 1050,
-        color: "black",
-        style: "cross-hatch",
+        color: BORDER_COLOR,
+        style: BORDER_STYLE,
       }),
       new RoughRectangle({
         x: -50,
         y: 1025,
         width: 2180,
-        height: 14,
-        color: "black",
-        style: "cross-hatch",
+        height: BORDER_WIDTH,
+        color: BORDER_COLOR,
+        style: BORDER_STYLE,
       }),
       new RoughRectangle({
         x: 2175,
         y: -50,
-        width: 14,
+        width: BORDER_WIDTH,
         height: 1050,
-        color: "black",
-        style: "cross-hatch",
+        color: BORDER_COLOR,
+        style: BORDER_STYLE,
       }),
     ];
   }

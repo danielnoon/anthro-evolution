@@ -2,18 +2,27 @@ import { GObject } from "gamedeck/lib/GObject";
 import { Vector2 } from "gamedeck/lib/Utils";
 import { partition, range } from "itertools";
 import { RoughCanvas } from "roughjs/bin/canvas";
+import { Options } from "roughjs/bin/core";
 
 interface Set {
+  type: string;
   ops: {
+    op: string;
     data: number[];
   }[];
+}
+
+interface Drawable {
+  shape: string;
+  sets: Set[];
+  options: Options;
 }
 
 export default class RoughRectangle extends GObject {
   color: string;
   style: string;
   static rough: RoughCanvas | null;
-  static cache = new Map<string, any>();
+  static cache = new Map<string, { shape: Drawable; base: Set[] }>();
 
   constructor({
     x = 0,
@@ -38,35 +47,35 @@ export default class RoughRectangle extends GObject {
     return (this.id ?? "") + this.dimensions.x + this.dimensions.y;
   }
 
-  private setOps() {
-    const sets = RoughRectangle.cache.get(this.cacheId).sets as Set[];
-
-    for (const set of sets) {
-      for (const op of set.ops) {
-        const data = op.data;
-        const [ys, xs] = partition(range(data.length), (x) => x % 2 !== 0);
-        for (const x of xs) {
-          data[x] += this.position.x;
-        }
-        for (const y of ys) {
-          data[y] += this.position.y;
-        }
-      }
-    }
+  copySets(sets: Set[]): Set[] {
+    return sets.map((set) => {
+      return {
+        type: set.type,
+        ops: set.ops.map((op) => {
+          return {
+            op: op.op,
+            data: op.data.slice(),
+          };
+        }),
+      };
+    });
   }
 
-  private restoreOps() {
-    const sets = RoughRectangle.cache.get(this.cacheId).sets as Set[];
-
-    for (const set of sets) {
-      for (const op of set.ops) {
-        const data = op.data;
-        const [ys, xs] = partition(range(data.length), (x) => x % 2 !== 0);
-        for (const x of xs) {
-          data[x] -= this.position.x;
-        }
+  updatePosition() {
+    const { shape, base } = RoughRectangle.cache.get(this.cacheId)!;
+    const sets = shape.sets;
+    for (const i of range(sets.length)) {
+      const set = sets[i];
+      const baseSet = base[i];
+      for (const j of range(set.ops.length)) {
+        const op = set.ops[j];
+        const baseOp = baseSet.ops[j];
+        const [ys, xs] = partition(range(op.data.length), (x) => x % 2 !== 0);
         for (const y of ys) {
-          data[y] -= this.position.y;
+          op.data[y] = this.position.y + baseOp.data[y];
+        }
+        for (const x of xs) {
+          op.data[x] = this.position.x + baseOp.data[x];
         }
       }
     }
@@ -91,14 +100,20 @@ export default class RoughRectangle extends GObject {
         }
       );
 
-      RoughRectangle.cache.set(this.cacheId, rect);
+      console.log(rect);
+
+      RoughRectangle.cache.set(this.cacheId, {
+        shape: rect,
+        base: this.copySets(rect.sets),
+      });
     }
-    this.setOps();
+    // this.setOps();
+    this.updatePosition();
 
     ctx.save();
-    const rect = RoughRectangle.cache.get(this.cacheId);
-    RoughRectangle.rough.draw(rect);
+    const { shape } = RoughRectangle.cache.get(this.cacheId)!;
+    RoughRectangle.rough.draw(shape as any);
     ctx.restore();
-    this.restoreOps();
+    // this.restoreOps();
   }
 }
