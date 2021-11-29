@@ -66,10 +66,10 @@ export class MainScene extends Scene {
       height: game.height,
       color: BACKGROUND_COLOR,
       children: [
-        new Background(),
         new Camera(this.cameraState, {
-          children: [makeClade(clades, true)],
+          children: [makeClade(clades, true), new Background()],
         }),
+
         new Dot({
           x: this.mousePos.x - 1,
           y: this.mousePos.y - 1,

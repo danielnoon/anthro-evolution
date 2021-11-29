@@ -4,9 +4,11 @@ import SpeciesStore from "../data/SpeciesStore";
 import publish from "../pubsub/publish";
 import useSubscription from "../pubsub/useSubscription";
 import CloseIcon from "@mui/icons-material/Close";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+// import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import Taxonomy from "./Taxonomy";
 import Legend from "./Legend";
+import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 
 const PADDING = 20;
 
@@ -147,33 +149,38 @@ export default function Sidebar() {
       </div>
       <Legend />
       <div className={[dialog, state].join(" ")}>
-        <button
-          className={contextButton(10)}
-          onClick={() => publish("show-details", null)}
+        <OverlayScrollbarsComponent
+          style={{ height: "100%" }}
+          options={{ scrollbars: { autoHide: "move" } }}
         >
-          <CloseIcon />
-        </button>
-        {species && (
-          <>
-            <button
-              className={contextButton(60)}
-              onClick={() => window.open(species.image)}
-            >
-              <OpenInNewIcon />
-            </button>
-            <img src={species.image} alt={species.name} width="100%" />
-            <div className={content}>
-              <h2>
-                {species.name} <br />
-                <small className="binomial">{species.binomial}</small>
-              </h2>
-              {species.description.split("\n").map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
-              <Taxonomy names={species.taxonomy} />
-            </div>
-          </>
-        )}
+          <button
+            className={contextButton(10)}
+            onClick={() => publish("show-details", null)}
+          >
+            <CloseIcon />
+          </button>
+          {species && (
+            <>
+              <button
+                className={contextButton(60)}
+                onClick={() => window.open(species.image)}
+              >
+                <ImageSearchIcon />
+              </button>
+              <img src={species.image} alt={species.name} width="100%" />
+              <div className={content}>
+                <h2>
+                  {species.name} <br />
+                  <small className="binomial">{species.binomial}</small>
+                </h2>
+                {species.description.split("\n").map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+                <Taxonomy names={species.taxonomy} />
+              </div>
+            </>
+          )}
+        </OverlayScrollbarsComponent>
       </div>
     </div>
   );

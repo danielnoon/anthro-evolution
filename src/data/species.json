@@ -78,19 +78,21 @@
     "binomial": "Tarsius spectrum",
     "name": "Spectral tarsier",
     "status": "vulnerable",
-    "description": "",
+    "description": "The spectral tarsier is a species of tarsier found on the island of Selayar in Indonesia. It is apparently less specialized than the Philippine tarsier or Horsfield's tarsier; for example, it lacks adhesive toes. While its range used to also include the population on nearby southwestern Sulawesi, this population has been reclassified as a separate species, Tarsius fuscus. Some of the earlier research published on Tarsius spectrum refers to the taxon that was recently reclassified and elevated to a separate species, the Gursky's spectral tarsier.\nSpectral tarsiers are nocturnal, waking up at sunset to spend the nights foraging for insects, eating, and socializing. They travel between trees to socialize, which usually includes grooming one another, scent marking, playing and vocalizing. At the very base of the tarsier society is that they live in groups and males and females have different roles. Males tend to travel longer distances and they occupy a larger area. Females tend to hunt more efficiently and consume more insects. Groups of these tarsiers are usually composed of 2 to 6 individuals. A study found that 14% of groups contained more than 1 adult female. “In one of the groups with two adult females, both females gave birth to infants.” In the same research, it was found that tarsiers can be both monogamous and polygynous, and that some live in pairs or groups and some males may even live alone.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Tarsius_tarsier_Tandurusa_zoo.JPG",
     "taxonomy": [
-      "Strepsirrhini",
-      "Lemuriformes",
-      "",
-      "Lemuroidea",
-      "Daubentoniidae",
+      "Haplorhini",
+      "Tarsiiformes",
       "",
       "",
-      "Daubentonia",
-      "madagascariensis"
-    ]
+      "Tarsiidae",
+      "",
+      "",
+      "Tarsius",
+      "spectrum"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Spectral_tarsier",
+    "references": ["tarsier conservation"]
   },
   {
     "binomial": "Loris lydekkerianus",
