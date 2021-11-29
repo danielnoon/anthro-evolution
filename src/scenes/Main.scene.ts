@@ -7,6 +7,8 @@ import clades from "../data/clades.json";
 import { Camera, CameraState } from "./obj/Camera.obj";
 import publish from "../pubsub/publish";
 import Background from "./obj/Background.obj";
+import RoughRectangle from "./obj/RoughRectangle.obj";
+import { Text } from "gamedeck/lib/gobjects/Text";
 
 const BACKGROUND_COLOR = "#F4F5F6";
 
@@ -28,6 +30,50 @@ export class MainScene extends Scene {
   mousePos = new Vector2(0, 0);
   isClicking = false;
   clickStart = new Vector2(0, 0);
+
+  makeBorder() {
+    return [
+      new Text({
+        position: new Vector2(20, -90),
+        text: "Order Primates",
+        font: "800 60px Caveat",
+        color: "#000",
+        positioning: "bottom left",
+      }),
+      new RoughRectangle({
+        x: -80,
+        y: -60,
+        width: 2225,
+        height: 14,
+        color: "black",
+        style: "cross-hatch",
+      }),
+      new RoughRectangle({
+        x: -100,
+        y: -30,
+        width: 14,
+        height: 1050,
+        color: "black",
+        style: "cross-hatch",
+      }),
+      new RoughRectangle({
+        x: -50,
+        y: 1025,
+        width: 2180,
+        height: 14,
+        color: "black",
+        style: "cross-hatch",
+      }),
+      new RoughRectangle({
+        x: 2175,
+        y: -50,
+        width: 14,
+        height: 1050,
+        color: "black",
+        style: "cross-hatch",
+      }),
+    ];
+  }
 
   build(game: Game) {
     function isSubClade(c: string | CladeData): c is CladeData {
@@ -67,7 +113,11 @@ export class MainScene extends Scene {
       color: BACKGROUND_COLOR,
       children: [
         new Camera(this.cameraState, {
-          children: [makeClade(clades, true), new Background()],
+          children: [
+            makeClade(clades, true),
+            ...this.makeBorder(),
+            new Background(),
+          ],
         }),
 
         new Dot({

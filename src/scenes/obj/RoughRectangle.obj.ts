@@ -11,6 +11,7 @@ interface Set {
 
 export default class RoughRectangle extends GObject {
   color: string;
+  style: string;
   static rough: RoughCanvas | null;
   static cache = new Map<string, any>();
 
@@ -21,6 +22,7 @@ export default class RoughRectangle extends GObject {
     height = 0,
     color = "rgb(255, 255, 255)",
     id = "",
+    style = "solid",
   }) {
     super({
       position: new Vector2(x, y),
@@ -29,6 +31,7 @@ export default class RoughRectangle extends GObject {
     });
 
     this.color = color;
+    this.style = style;
   }
 
   get cacheId() {
@@ -84,7 +87,7 @@ export default class RoughRectangle extends GObject {
           fill: this.color,
           stroke: this.color,
           roughness: 0.8,
-          fillStyle: "solid",
+          fillStyle: this.style,
         }
       );
 

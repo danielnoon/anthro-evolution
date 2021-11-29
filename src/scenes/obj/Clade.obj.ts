@@ -45,6 +45,8 @@ export default class Clade extends GObject {
   private left: Vector2;
 
   constructor(props: CladeProps, game: Game) {
+    game.canvasContext.font = FONT;
+
     const topMeasure = game.canvasContext.measureText(props.topLabel);
     const bottomMeasure = game.canvasContext.measureText(props.bottomLabel);
     const leftMeasure = props.leftLabel

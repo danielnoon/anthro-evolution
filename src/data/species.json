@@ -259,19 +259,20 @@
     "binomial": "Pongo pygmaeus",
     "name": "Bornean orangutan",
     "status": "critically endangered",
-    "description": "",
+    "description": "The Bornean orangutan is a species of orangutan endemic to the island of Borneo. Together with the Sumatran orangutan and Tapanuli orangutan, it belongs to the only genus of great apes native to Asia. Like the other great apes, orangutans are highly intelligent, displaying tool use and distinct cultural patterns in the wild. Orangutans share approximately 97% of their DNA with humans.\nThe Bornean orangutan is the second-largest ape after the gorilla, and the largest extant truly arboreal animal. It has a distinctive body shape with very long arms that may reach up to 4.9 feet in length. It has gray skin, a coarse, shaggy, reddish coat and prehensile, grasping hands and feet. Its coat does not cover its face unlike most mammals, although Bornean orangutans do have some hair on their faces including a beard and mustache. It also has large, fatty cheek pads known as flanges as well as a pendulous throat sac.\nBornean orangutans are highly sexually dimorphic and have several features that differ between males and females. Males have much larger cheek pads, or flanges, that are composed of muscle and large amounts of fat. In females, the flanges are mostly composed of muscle. Males have relatively larger canines and premolars. Males have a more pronounced beard and mustache. The throat sac in males is also considerably larger. There are two body types for sexually mature males: smaller or larger. Larger males are more dominant but smaller males still breed successfully. There is little sexual dimorphism at birth.",
     "image": "https://live.staticflickr.com/7885/46833957704_e2ba1c1b0e_o_d.jpg",
     "taxonomy": [
-      "Strepsirrhini",
-      "Lemuriformes",
+      "Haplorhini",
+      "Simiiformes",
+      "Catarrhini",
+      "Hominoidia",
+      "Hominidae",
+      "Ponginae",
       "",
-      "Lemuroidea",
-      "Daubentoniidae",
-      "",
-      "",
-      "Daubentonia",
-      "madagascariensis"
-    ]
+      "Pongo",
+      "pygmaeus"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Bornean_orangutan"
   },
   {
     "binomial": "Gorilla gorilla",
