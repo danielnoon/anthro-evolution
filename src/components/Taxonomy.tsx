@@ -27,12 +27,15 @@ export default function Taxonomy({ names }: Props) {
   const sortedLevels = zip(levels, names).filter(([, name]) => name);
 
   return (
-    <ul>
-      {sortedLevels.map(([level, name]) => (
-        <li className={levelItem(level)} key={level}>
-          {name}
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h3>Taxonomy</h3>
+      <ul>
+        {sortedLevels.map(([level, name]) => (
+          <li className={levelItem(level)} key={level}>
+            {name}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

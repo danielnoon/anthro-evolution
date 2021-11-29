@@ -9,6 +9,7 @@ import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import Taxonomy from "./Taxonomy";
 import Legend from "./Legend";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
+import ReferenceStore from "../data/ReferenceStore";
 
 const PADDING = 20;
 
@@ -173,10 +174,54 @@ export default function Sidebar() {
                   {species.name} <br />
                   <small className="binomial">{species.binomial}</small>
                 </h2>
+                <Taxonomy names={species.taxonomy} />
+                <h3>Description</h3>
                 {species.description.split("\n").map((line, i) => (
                   <p key={i}>{line}</p>
                 ))}
-                <Taxonomy names={species.taxonomy} />
+              </div>
+              {species.youtube && (
+                <>
+                  <h3 style={{ paddingInline: 20, marginTop: 0 }}>Video</h3>
+                  <iframe
+                    width="100%"
+                    height="300"
+                    src={`https://www.youtube-nocookie.com/embed/${species.youtube}`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </>
+              )}
+              <div className={content} style={{ paddingBottom: 40 }}>
+                <h3>Attributions</h3>
+                {species.wikipedia && (
+                  <div>
+                    <a
+                      href={species.wikipedia}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Text adapted from Wikipedia.
+                    </a>
+                    {" • "}
+                    <a href="https://creativecommons.org/licenses/by-sa/3.0/">
+                      CC BY-SA 3.0
+                    </a>
+                  </div>
+                )}
+
+                {species.references && (
+                  <>
+                    <h4>References</h4>
+                    <ul>
+                      {species.references.map((ref, i) => (
+                        <li>{ReferenceStore.get(ref).short}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </div>
             </>
           )}

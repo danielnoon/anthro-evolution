@@ -82,6 +82,12 @@ export class MainScene extends Scene {
   }
 
   update(game: Game) {
+    if (game.input.mouseIsDown()) {
+      game.canvasElement.style.cursor = "grabbing";
+    } else {
+      game.canvasElement.style.cursor = "grab";
+    }
+
     this.cameraState.update(game);
 
     this.mousePos = game.input.getMouseLocation();
@@ -100,6 +106,5 @@ export class MainScene extends Scene {
         this.isClicking = false;
       }
     });
-    game.canvasElement.style.cursor = "default";
   }
 }
