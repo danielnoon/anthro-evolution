@@ -100,20 +100,17 @@ export default class RoughRectangle extends GObject {
         }
       );
 
-      console.log(rect);
-
       RoughRectangle.cache.set(this.cacheId, {
         shape: rect,
         base: this.copySets(rect.sets),
       });
     }
-    // this.setOps();
+
     this.updatePosition();
 
     ctx.save();
     const { shape } = RoughRectangle.cache.get(this.cacheId)!;
     RoughRectangle.rough.draw(shape as any);
     ctx.restore();
-    // this.restoreOps();
   }
 }

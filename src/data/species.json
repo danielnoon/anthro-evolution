@@ -281,16 +281,17 @@
     "description": "",
     "image": "https://files.worldwildlife.org/wwfcmsprod/images/HERO_Mountain_Gorilla_Silverback_WW22557/story_full_width/5zoaj3l0f_Mountain_Gorilla_Silverback_WW22557.jpg",
     "taxonomy": [
-      "Strepsirrhini",
-      "Lemuriformes",
-      "",
-      "Lemuroidea",
-      "Daubentoniidae",
-      "",
-      "",
-      "Daubentonia",
-      "madagascariensis"
-    ]
+      "Haplorhini",
+      "Simiiformes",
+      "Catarrhini",
+      "Hominoidea",
+      "Hominidae",
+      "Homininae",
+      "Gorillini",
+      "Gorilla",
+      "gorilla"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Western_gorilla"
   },
   {
     "binomial": "Pan troglodytes",
