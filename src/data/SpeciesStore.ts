@@ -4,19 +4,18 @@ interface Species {
   binomial: string;
   image: string;
   name: string;
+  status: string;
   description: string;
   taxonomy: string[];
   wikipedia?: string;
   references?: string[];
   youtube?: string;
+  adaptations?: string[];
 }
 
 species.forEach((s) => {
-  const link = document.createElement("link");
-  link.rel = "preload";
-  link.href = s.image;
-  link.as = "image";
-  document.head.appendChild(link);
+  const img = new Image();
+  img.src = s.image;
 });
 
 export default class SpeciesStore {

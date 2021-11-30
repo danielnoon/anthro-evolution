@@ -8,6 +8,9 @@ const CMAP = {
   purple: "#6200B3",
   olive: "#37423D",
   brown: "#7A542E",
+  pink: "#E869A2",
+  white: "#FFFFFF",
+  black: "#000000",
 };
 
 const COLORS: Record<string, string> = {
@@ -20,6 +23,17 @@ const COLORS: Record<string, string> = {
   subfamily: CMAP.purple,
   tribe: CMAP.olive,
   genus: CMAP.brown,
+
+  "vulnerable:bg": CMAP.orange,
+  "vulnerable:text": CMAP.white,
+  "endangered:bg": CMAP.red,
+  "endangered:text": CMAP.white,
+  "critically endangered:bg": CMAP.red,
+  "critically endangered:text": CMAP.white,
+  "least concern:bg": CMAP.lightBlue,
+  "least concern:text": CMAP.white,
+  "near threatened:bg": CMAP.lightGreen,
+  "near threatened:text": CMAP.white,
 };
 
 export default COLORS;

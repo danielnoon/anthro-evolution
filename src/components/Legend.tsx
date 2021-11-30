@@ -41,17 +41,31 @@ const legend = css`
   }
 `;
 
+const levels = [
+  "Order",
+  "Suborder",
+  "Infraorder",
+  "Parvorder",
+  "Superfamily",
+  "Family",
+  "Subfamily",
+  "Tribe",
+  "Genus",
+];
+
 export default function Legend() {
   return (
     <div className={legend}>
       <h3>Color&nbsp;Legend</h3>
       <ul>
-        {Object.entries(COLORS).map(([level, color]) => (
-          <li className="level" style={{ color }} key={level}>
-            <div className="box" style={{ backgroundColor: color }}></div>
-            {level}
-          </li>
-        ))}
+        {levels
+          .map((level) => [level, COLORS[level.toLowerCase()]])
+          .map(([level, color]) => (
+            <li className="level" style={{ color }} key={level}>
+              <div className="box" style={{ backgroundColor: color }}></div>
+              {level}
+            </li>
+          ))}
       </ul>
     </div>
   );

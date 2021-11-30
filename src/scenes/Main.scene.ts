@@ -6,14 +6,18 @@ import Clade from "./obj/Clade.obj";
 import clades from "../data/clades.json";
 import { Camera, CameraState } from "./obj/Camera.obj";
 import publish from "../pubsub/publish";
-import Background from "./obj/Background.obj";
+import Texture from "./obj/Texture.obj";
 import RoughRectangle from "./obj/RoughRectangle.obj";
 import { Text } from "gamedeck/lib/gobjects/Text";
 
 const BACKGROUND_COLOR = "#F4F5F6";
 const BORDER_COLOR = "#444";
-const BORDER_WIDTH = 15;
+const BORDER_THICKNESS = 15;
 const BORDER_STYLE = "solid";
+const BORDER_X = -100;
+const BORDER_Y = -100;
+const BORDER_WIDTH = 2300;
+const BORDER_HEIGHT = 1170;
 
 interface CladeData {
   label: string;
@@ -37,41 +41,41 @@ export class MainScene extends Scene {
   makeBorder() {
     return [
       new Text({
-        position: new Vector2(20, -90),
+        position: new Vector2(20, BORDER_Y - 20),
         text: "Order Primates",
         font: "800 60px Caveat",
         color: "#000",
         positioning: "bottom left",
       }),
       new RoughRectangle({
-        x: -80,
-        y: -60,
-        width: 2225,
-        height: BORDER_WIDTH,
-        color: BORDER_COLOR,
-        style: BORDER_STYLE,
-      }),
-      new RoughRectangle({
-        x: -100,
-        y: -30,
+        x: BORDER_X + 14,
+        y: BORDER_Y - 2,
         width: BORDER_WIDTH,
-        height: 1050,
+        height: BORDER_THICKNESS,
         color: BORDER_COLOR,
         style: BORDER_STYLE,
       }),
       new RoughRectangle({
-        x: -50,
-        y: 1025,
-        width: 2180,
-        height: BORDER_WIDTH,
+        x: BORDER_X - 12,
+        y: BORDER_Y + 4,
+        width: BORDER_THICKNESS,
+        height: BORDER_HEIGHT + 8,
         color: BORDER_COLOR,
         style: BORDER_STYLE,
       }),
       new RoughRectangle({
-        x: 2175,
-        y: -50,
-        width: BORDER_WIDTH,
-        height: 1050,
+        x: BORDER_X,
+        y: BORDER_HEIGHT - 100 + 6,
+        width: BORDER_WIDTH + 20,
+        height: BORDER_THICKNESS,
+        color: BORDER_COLOR,
+        style: BORDER_STYLE,
+      }),
+      new RoughRectangle({
+        x: BORDER_WIDTH - 100,
+        y: BORDER_Y,
+        width: BORDER_THICKNESS,
+        height: BORDER_HEIGHT + 8,
         color: BORDER_COLOR,
         style: BORDER_STYLE,
       }),
@@ -111,21 +115,32 @@ export class MainScene extends Scene {
     return new Rectangle({
       x: 0,
       y: 0,
-      width: game.width,
-      height: game.height,
-      color: BACKGROUND_COLOR,
+      width: 0,
+      height: 0,
+      color: "transparent",
       children: [
+        new Rectangle({
+          x: this.cameraState.origin.x,
+          y: this.cameraState.origin.y,
+          width: game.width / this.cameraState.scale,
+          height: game.height / this.cameraState.scale,
+          color: BACKGROUND_COLOR,
+        }),
         new Camera(this.cameraState, {
           children: [
             makeClade(clades, true),
             ...this.makeBorder(),
-            new Background(),
+            new Texture(1 / this.cameraState.scale, this.cameraState.origin),
           ],
         }),
 
         new Dot({
-          x: this.mousePos.x - 1,
-          y: this.mousePos.y - 1,
+          x:
+            this.mousePos.x / this.cameraState.scale +
+            this.cameraState.origin.x,
+          y:
+            this.mousePos.y / this.cameraState.scale +
+            this.cameraState.origin.y,
           color: "transparent",
           radius: 1,
           id: "mouse",

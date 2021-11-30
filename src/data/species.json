@@ -16,7 +16,15 @@
       "Cebuella",
       "pygmaea"
     ],
-    "wikipedia": "https://en.wikipedia.org/wiki/Pygmy_marmoset"
+    "wikipedia": "https://en.wikipedia.org/wiki/Pygmy_marmoset",
+    "adaptations": [
+      "Tiny",
+      "Arboreal",
+      "Vocal, chemical, and visual communication",
+      "180-degree vision",
+      "Claw-like nails for climbing",
+      "Dentition suited for eating tree sap"
+    ]
   },
   {
     "binomial": "Macaca sylvanus",
@@ -36,7 +44,8 @@
       "sylvanus"
     ],
     "youtube": "641EOJCk8p8",
-    "wikipedia": "https://en.wikipedia.org/wiki/Barbary_macaque"
+    "wikipedia": "https://en.wikipedia.org/wiki/Barbary_macaque",
+    "adaptations": ["Alloparental childcare", "Frugivorous and herbivorous"]
   },
   {
     "binomial": "Nycticebus bengalensis",
@@ -55,7 +64,15 @@
       "Nycticebus",
       "bengalensis"
     ],
-    "wikipedia": "https://en.wikipedia.org/wiki/Bengal_slow_loris"
+    "wikipedia": "https://en.wikipedia.org/wiki/Bengal_slow_loris",
+    "adaptations": [
+      "Wet nose",
+      "Complex chemical communication",
+      "Nocturnal",
+      "Arboreal",
+      "Frugivorous",
+      "Insectivorous"
+    ]
   },
   {
     "binomial": "Daubentonia madagascariensis",
@@ -75,7 +92,12 @@
       "madagascariensis"
     ],
     "wikipedia": "https://en.wikipedia.org/wiki/Aye-aye",
-    "youtube": "xzF9RUUum4A"
+    "youtube": "xzF9RUUum4A",
+    "adaptations": [
+      "Perpetually-growing teeth",
+      "Fingers",
+      "Sensitive, ridged ears"
+    ]
   },
   {
     "binomial": "Tarsius spectrum",
@@ -96,7 +118,13 @@
     ],
     "wikipedia": "https://en.wikipedia.org/wiki/Spectral_tarsier",
     "references": ["tarsier conservation"],
-    "youtube": "_oTK9NsrmvM"
+    "youtube": "_oTK9NsrmvM",
+    "adaptations": [
+      "Nocturnal",
+      "Frugivorous",
+      "Insectivorous",
+      "Monogamous or polygynous"
+    ]
   },
   {
     "binomial": "Loris lydekkerianus",
@@ -115,7 +143,12 @@
       "Loris",
       "lydekkerianus"
     ],
-    "wikipedia": "https://en.wikipedia.org/wiki/Gray_Slender_Loris"
+    "wikipedia": "https://en.wikipedia.org/wiki/Gray_Slender_Loris",
+    "adaptations": [
+      "Extreme stereoscopic vision",
+      "Excellent climber",
+      "Arborial"
+    ]
   },
   {
     "binomial": "Lemur catta",
@@ -136,7 +169,8 @@
     ],
     "wikipedia": "https://en.wikipedia.org/wiki/Ring-tailed_lemur",
     "youtube": "jcjDrE1ye-E",
-    "references": ["lemur intelligence"]
+    "references": ["lemur intelligence"],
+    "adaptations": ["Spur marking", "Omnivorous", "More terrestrial", "Diurnal"]
   },
   {
     "binomial": "Carlito syrichta",
@@ -278,7 +312,7 @@
     "binomial": "Gorilla gorilla",
     "name": "Western gorilla",
     "status": "critically endangered",
-    "description": "",
+    "description": "Gorillas are herbivorous, predominantly ground-dwelling great apes that inhabit the tropical forests of equatorial Africa. The DNA of gorillas is highly similar to that of humans, from 95 to 99% depending on what is included, and they are the next closest living relatives to humans after chimpanzees and bonobos.\nGorillas are considered highly intelligent. A few individuals in captivity, such as Koko, have been taught a subset of sign language. Like the other great apes, gorillas can laugh, grieve, have “rich emotional lives,” develop strong family bonds, make and use tools, and think about the past and future. Some researchers believe gorillas have spiritual feelings or religious sentiments. They have been shown to have cultures in different areas revolving around different methods of food preparation, and will show individual colour preferences.\nGorillas do not display territorial behavior, and neighboring groups often overlap ranges. The group usually favors a certain area within the home range but seems to follow a seasonal pattern depending upon the availability of ripening fruits and, at some sites, localized large open clearings (swamps and “bais”). Gorillas normally travel 2-3 miles per day. Populations feeding on high-energy foods that vary spatially and seasonally tend to have greater day ranges than those feeding on lower-quality but more consistently available foods. Larger groups travel greater distances in order to obtain sufficient food.",
     "image": "https://files.worldwildlife.org/wwfcmsprod/images/HERO_Mountain_Gorilla_Silverback_WW22557/story_full_width/5zoaj3l0f_Mountain_Gorilla_Silverback_WW22557.jpg",
     "taxonomy": [
       "Haplorhini",
@@ -291,7 +325,8 @@
       "Gorilla",
       "gorilla"
     ],
-    "wikipedia": "https://en.wikipedia.org/wiki/Western_gorilla"
+    "wikipedia": "https://en.wikipedia.org/wiki/Western_gorilla",
+    "youtube": "7fQmjbx9zoY"
   },
   {
     "binomial": "Pan troglodytes",

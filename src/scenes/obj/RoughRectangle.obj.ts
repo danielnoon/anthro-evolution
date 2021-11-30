@@ -44,7 +44,7 @@ export default class RoughRectangle extends GObject {
   }
 
   get cacheId() {
-    return (this.id ?? "") + this.dimensions.x + this.dimensions.y;
+    return (this.id ?? "") + this.color + this.dimensions.x + this.dimensions.y;
   }
 
   copySets(sets: Set[]): Set[] {

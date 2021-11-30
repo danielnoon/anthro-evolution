@@ -174,7 +174,7 @@ export default function Sidebar() {
                   {species.name} <br />
                   <small className="binomial">{species.binomial}</small>
                 </h2>
-                <Taxonomy names={species.taxonomy} />
+                <Taxonomy names={species.taxonomy} status={species.status} />
                 <h3>Description</h3>
                 {species.description.split("\n").map((line, i) => (
                   <p key={i}>{line}</p>
