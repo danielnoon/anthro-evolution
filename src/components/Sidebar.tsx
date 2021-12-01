@@ -1,15 +1,16 @@
 import { css } from "@emotion/css";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import SpeciesStore from "../data/SpeciesStore";
 import publish from "../pubsub/publish";
 import useSubscription from "../pubsub/useSubscription";
 import CloseIcon from "@mui/icons-material/Close";
-// import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import AssignmentIcon from "@mui/icons-material/Assignment";
 import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import Taxonomy from "./Taxonomy";
 import Legend from "./Legend";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import ReferenceStore from "../data/ReferenceStore";
+import Citations from "./Citations";
 
 const PADDING = 20;
 
@@ -32,6 +33,9 @@ const backdrop = css`
 
 const dialog = css`
   position: absolute;
+  outline: none;
+  border: none;
+  padding: 0;
   top: ${PADDING}px;
   right: ${PADDING}px;
   width: 560px;
@@ -41,8 +45,7 @@ const dialog = css`
   border-radius: 20px;
   pointer-events: auto;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   box-shadow: 0 4px 40px rgba(10, 10, 20, 0.4);
 
   &.closed {
@@ -135,8 +138,44 @@ const title = css`
   }
 `;
 
+const citationsButton = css`
+  position: absolute;
+  bottom: ${PADDING}px;
+  right: ${PADDING}px;
+  font-size: 1.5em;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.6em 0.8em;
+  border: none;
+  box-shadow: 0 2px 8px rgba(10, 10, 20, 0.2);
+  pointer-events: auto;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 0.3em;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-family: "DM Sans", sans-serif;
+  transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #fafafa;
+    box-shadow: 0 2px 10px rgba(10, 10, 20, 0.2);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(10, 10, 20, 0.2);
+    background-color: #fafafa;
+  }
+`;
+
 export default function Sidebar() {
   const binomial = useSubscription<string>("show-details");
+  const [citationsOpen, setCitationsOpen] = useState(false);
   const state = binomial !== null ? "open" : "closed";
   const prev = useRef(binomial);
 
@@ -153,6 +192,14 @@ export default function Sidebar() {
         <h1>Human Relatives</h1>
         <small className="attribution">By Daniel Noon</small>
       </div>
+      <button
+        className={citationsButton}
+        onClick={() => setCitationsOpen(true)}
+      >
+        <AssignmentIcon />
+        Citations
+      </button>
+      <Citations open={citationsOpen} onClose={() => setCitationsOpen(false)} />
       <Legend />
       <div className={[dialog, state].join(" ")}>
         <OverlayScrollbarsComponent

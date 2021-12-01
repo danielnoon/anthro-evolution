@@ -10,4 +10,8 @@ export default class ReferenceStore {
   static get(key: string): Reference {
     return references.find((reference) => reference.id === key)!;
   }
+
+  static get all(): Reference[] {
+    return references;
+  }
 }

@@ -47,7 +47,7 @@ const wrapper = css`
       flex: 1;
       display: grid;
       place-items: center;
-      max-height: 10em;
+      max-height: 8em;
     }
   }
 `;
@@ -62,13 +62,14 @@ const statusText = (status: string) => css`
 
 const levelItem = (level: string) => css`
   color: ${COLORS[level.toLowerCase()]};
-  margin-top: 1em;
+  ${level !== "Suborder" && "margin-top: 1em;"}
   list-style: none;
+  font-size: 1.1em;
 
   &::before {
     content: attr(data-level);
     position: absolute;
-    margin-top: -0.8em;
+    margin-top: -1em;
     font-size: 0.7em;
     text-transform: uppercase;
     font-weight: bold;
