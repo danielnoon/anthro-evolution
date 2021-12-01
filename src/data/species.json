@@ -332,18 +332,20 @@
     "binomial": "Pan troglodytes",
     "name": "Chimpanzee",
     "status": "endangered",
-    "description": "",
+    "description": "The chimpanzee is a species of great ape native to the forest and savannah of tropical Africa. Only the chimpanzee and the closely related bonobo are classified in the genus Pan. Evidence from fossils and DNA sequencing shows that Pan is a sister taxon to the human lineage and is humans' closest living relative.\nThe chimpanzee is covered in coarse black hair, but has a bare face, fingers, toes, palms of the hands, and soles of the feet. It is larger and more robust than the bonobo, weighing 88–154 pounds for males and 60–110 pounds for females and standing 3’ 11” to 4’ 11”.  The chimpanzee lives in groups that range in size from 15 to 150 members, although individuals travel and forage in much smaller groups during the day. The species lives in a strict male-dominated hierarchy, where disputes are generally settled without the need for violence. Nearly all chimpanzee populations have been recorded using tools, modifying sticks, rocks, grass and leaves and using them for hunting and acquiring honey, termites, ants, nuts and water. The species has also been found creating sharpened sticks to spear small mammals.\nChimpanzees are adapted for both arboreal and terrestrial locomotion. Arboreal locomotion consists of vertical climbing and brachiation. On the ground chimpanzees move both quadrupedally and bipedally, which appear to have similar energy costs. As with bonobos and gorillas, chimpanzees move quadrupedally by knuckle-walking, which probably evolved independently in Pan and Gorilla. The physical strength of chimps is around 1.5 times greater than humans due to higher content of fast twitch muscle fibers, one of the chimpanzee's adaptations for climbing and swinging.",
     "image": "https://cdn.mos.cms.futurecdn.net/26MWT6NHVvQMbLKpmnMjDR-970-80.jpg.webp",
     "taxonomy": [
-      "Strepsirrhini",
-      "Lemuriformes",
-      "",
-      "Lemuroidea",
-      "Daubentoniidae",
-      "",
-      "",
-      "Daubentonia",
-      "madagascariensis"
-    ]
+      "Haplorhini",
+      "Simiiformes",
+      "Catarrhini",
+      "Hominoidea",
+      "Hominidae",
+      "Homininae",
+      "Hominini",
+      "Pan",
+      "troglodytes"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Chimpanzee",
+    "youtube": "ZI9c7vseo50"
   }
 ]
