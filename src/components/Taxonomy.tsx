@@ -29,7 +29,12 @@ const wrapper = css`
   }
 
   & .taxonomy > h3 {
-    text-align: center;
+    padding-left: 10px;
+  }
+
+  & .levels {
+    padding: 10px;
+    margin: 0;
   }
 
   & .status {
@@ -42,6 +47,7 @@ const wrapper = css`
       flex: 1;
       display: grid;
       place-items: center;
+      max-height: 10em;
     }
   }
 `;
@@ -56,6 +62,22 @@ const statusText = (status: string) => css`
 
 const levelItem = (level: string) => css`
   color: ${COLORS[level.toLowerCase()]};
+  margin-top: 1em;
+  list-style: none;
+
+  &::before {
+    content: attr(data-level);
+    position: absolute;
+    margin-top: -0.8em;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+  }
+
+  &::marker {
+    content: "";
+  }
 `;
 
 export default function Taxonomy({ names, status }: Props) {
@@ -65,13 +87,13 @@ export default function Taxonomy({ names, status }: Props) {
     <div className={wrapper}>
       <div className="taxonomy">
         <h3>Taxonomy</h3>
-        <ul>
+        <ol className="levels">
           {sortedLevels.map(([level, name]) => (
-            <li className={levelItem(level)} key={level}>
+            <li data-level={level} className={levelItem(level)} key={level}>
               {name}
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
       <div className="status">
         <h3>Conservation Status</h3>

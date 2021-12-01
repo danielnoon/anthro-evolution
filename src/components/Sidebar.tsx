@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import React from "react";
+import React, { useRef } from "react";
 import SpeciesStore from "../data/SpeciesStore";
 import publish from "../pubsub/publish";
 import useSubscription from "../pubsub/useSubscription";
@@ -34,19 +34,19 @@ const dialog = css`
   position: absolute;
   top: ${PADDING}px;
   right: ${PADDING}px;
-  width: 500px;
+  width: 560px;
   max-width: calc(100% - ${PADDING * 2}px);
   height: calc(100% - ${PADDING * 2}px);
   background-color: #fff;
   border-radius: 20px;
   pointer-events: auto;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-x: hidden;
   overflow-y: auto;
   box-shadow: 0 4px 40px rgba(10, 10, 20, 0.4);
 
   &.closed {
-    transform: translateX(100%);
+    transform: translateX(calc(100% + ${PADDING * 2}px));
   }
 
   @media (max-width: 600px) {
@@ -138,8 +138,13 @@ const title = css`
 export default function Sidebar() {
   const binomial = useSubscription<string>("show-details");
   const state = binomial !== null ? "open" : "closed";
+  const prev = useRef(binomial);
 
-  const species = SpeciesStore.get(binomial ?? "");
+  const species = SpeciesStore.get(binomial ?? prev.current ?? "Hylobates lar");
+
+  if (species !== null) {
+    prev.current = binomial;
+  }
 
   return (
     <div>
@@ -217,7 +222,7 @@ export default function Sidebar() {
                     <h4>References</h4>
                     <ul>
                       {species.references.map((ref, i) => (
-                        <li>{ReferenceStore.get(ref).short}</li>
+                        <li key={ref}>{ReferenceStore.get(ref).short}</li>
                       ))}
                     </ul>
                   </>

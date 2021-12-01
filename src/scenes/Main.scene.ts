@@ -38,6 +38,33 @@ export class MainScene extends Scene {
   isClicking = false;
   clickStart = new Vector2(0, 0);
 
+  constructor(canvas: HTMLCanvasElement, game: Game) {
+    super();
+
+    window.addEventListener("resize", () => {
+      const ctx = canvas.getContext("2d")!;
+      const scale = 1 / this.cameraState.scale;
+
+      ctx.translate(this.cameraState.origin.x, this.cameraState.origin.y);
+      ctx.scale(scale, scale);
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      ctx.scale(1 / scale, 1 / scale);
+      ctx.translate(-this.cameraState.origin.x, -this.cameraState.origin.y);
+
+      game.width = canvas.width;
+      game.height = canvas.height;
+    });
+
+    window.addEventListener("pointermove", (ev) => game.input.mouseMove(ev));
+    window.addEventListener(
+      "pointerup",
+      () => ((game.input as any).left = false)
+    );
+  }
+
   makeBorder() {
     return [
       new Text({
@@ -59,7 +86,7 @@ export class MainScene extends Scene {
         x: BORDER_X - 12,
         y: BORDER_Y + 4,
         width: BORDER_THICKNESS,
-        height: BORDER_HEIGHT + 8,
+        height: BORDER_HEIGHT - 8,
         color: BORDER_COLOR,
         style: BORDER_STYLE,
       }),
@@ -75,7 +102,7 @@ export class MainScene extends Scene {
         x: BORDER_WIDTH - 100,
         y: BORDER_Y,
         width: BORDER_THICKNESS,
-        height: BORDER_HEIGHT + 8,
+        height: BORDER_HEIGHT + 4,
         color: BORDER_COLOR,
         style: BORDER_STYLE,
       }),

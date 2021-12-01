@@ -14,8 +14,14 @@ interface Species {
 }
 
 species.forEach((s) => {
+  const tag = document.createElement("link");
+  tag.rel = "prefetch";
+  tag.href = s.image;
+  document.head.appendChild(tag);
   const img = new Image();
   img.src = s.image;
+  img.hidden = true;
+  document.body.appendChild(img);
 });
 
 export default class SpeciesStore {
