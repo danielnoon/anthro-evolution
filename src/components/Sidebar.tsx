@@ -44,7 +44,7 @@ const dialog = css`
   background-color: #fff;
   border-radius: 20px;
   pointer-events: auto;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   box-shadow: 0 4px 40px rgba(10, 10, 20, 0.4);
 
@@ -109,6 +109,18 @@ const contextButton = (top: number) => css`
   align-items: center;
   justify-content: center;
   line-height: 0;
+  transition: transform 0.2s ease-in-out;
+
+  &:active,
+  &:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 6px rgba(10, 10, 40, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.9);
+    background-color: #eee;
+  }
 `;
 
 const title = css`
