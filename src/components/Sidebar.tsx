@@ -109,15 +109,17 @@ const contextButton = (top: number) => css`
   align-items: center;
   justify-content: center;
   line-height: 0;
-  transition: transform 0.2s ease-in-out;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:active,
+  &:focus,
   &:hover {
     border: 1px solid transparent;
     box-shadow: 0 0 6px rgba(10, 10, 40, 0.4);
+    transform: scale(1.1);
   }
 
   &:active {
+    border: 1px solid transparent;
     transform: scale(0.9);
     background-color: #eee;
   }
@@ -158,7 +160,7 @@ const citationsButton = css`
   background-color: #fff;
   border-radius: 10px;
   padding: 0.6em 0.8em;
-  border: none;
+  border: 1px solid transparent;
   box-shadow: 0 2px 8px rgba(10, 10, 20, 0.2);
   pointer-events: auto;
   outline: none;
@@ -172,10 +174,15 @@ const citationsButton = css`
   font-family: "DM Sans", sans-serif;
   transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #fafafa;
     box-shadow: 0 2px 10px rgba(10, 10, 20, 0.2);
     transform: translateY(-1px);
+  }
+
+  &:focus {
+    border: 1px solid #888;
   }
 
   &:active {
@@ -188,6 +195,7 @@ const citationsButton = css`
 export default function Sidebar() {
   const binomial = useSubscription<string>("show-details");
   const [citationsOpen, setCitationsOpen] = useState(false);
+
   const state = binomial !== null ? "open" : "closed";
   const prev = useRef(binomial);
 
@@ -199,7 +207,12 @@ export default function Sidebar() {
 
   return (
     <div>
-      <div className={[backdrop, state].join(" ")}></div>
+      <div
+        className={[
+          backdrop,
+          state === "open" || citationsOpen ? "open" : "closed",
+        ].join(" ")}
+      ></div>
       <div className={title}>
         <h1>Human Relatives</h1>
         <small className="attribution">By Daniel Noon</small>
@@ -221,6 +234,7 @@ export default function Sidebar() {
           <button
             className={contextButton(10)}
             onClick={() => publish("show-details", null)}
+            aria-label="Close"
           >
             <CloseIcon />
           </button>
@@ -229,6 +243,7 @@ export default function Sidebar() {
               <button
                 className={contextButton(60)}
                 onClick={() => window.open(species.image)}
+                aria-label="View image source"
               >
                 <ImageSearchIcon />
               </button>
